@@ -1,0 +1,531 @@
+{
+	"id": 0,
+	"name": "@kugou/sings-utils",
+	"kind": 0,
+	"flags": {},
+	"originalName": "",
+	"children": [
+		{
+			"id": 24,
+			"name": "UrlGetRequest",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 25,
+					"name": "default",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "UrlGetRequest.ts",
+							"line": 16,
+							"character": 24
+						}
+					],
+					"signatures": [
+						{
+							"id": 26,
+							"name": "default",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"returns": "//param参数，variable对应的值",
+								"tags": [
+									{
+										"tag": "date:",
+										"text": "2022-04-02 15:03:38"
+									},
+									{
+										"tag": "description:url分离出参数",
+										"text": "\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 27,
+									"name": "url",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"text": "//完整的url"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 28,
+									"name": "variable",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"text": "//param参数，键"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "string"
+									},
+									{
+										"type": "literal",
+										"value": false
+									}
+								]
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						25
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "UrlGetRequest.ts",
+					"line": 16,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 1,
+			"name": "changefilesize",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 2,
+					"name": "default",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "changefilesize.ts",
+							"line": 12,
+							"character": 24
+						}
+					],
+					"signatures": [
+						{
+							"id": 3,
+							"name": "default",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"returns": "size",
+								"tags": [
+									{
+										"tag": "date:",
+										"text": "2022-04-02 15:23:27\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 4,
+									"name": "limit",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						2
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "changefilesize.ts",
+					"line": 12,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 5,
+			"name": "debounce",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 6,
+					"name": "default",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "debounce.ts",
+							"line": 45,
+							"character": 24
+						}
+					],
+					"signatures": [
+						{
+							"id": 7,
+							"name": "default",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "函数去抖，也就是说当调用动作n毫秒后，才会执行该动作，若在这n毫秒内又调用此动作则将重新计算执行时间。",
+								"returns": "返回去抖之后的函数.",
+								"tags": [
+									{
+										"tag": "example",
+										"text": "\n\n// Avoid costly calculations while the window size is in flux.\njQuery(window).on('resize', _.debounce(calculateLayout, 150));\n\n// Invoke `sendMail` when clicked, debouncing subsequent calls.\njQuery(element).on('click', _.debounce(sendMail, 300, {\n  'leading': true,\n  'trailing': false\n}));\n\n// Ensure `batchLog` is invoked once after 1 second of debounced calls.\nvar debounced = _.debounce(batchLog, 250, { 'maxWait': 1000 });\nvar source = new EventSource('/stream');\njQuery(source).on('message', debounced);\n\n// Cancel the trailing debounced invocation.\njQuery(window).on('popstate', debounced.cancel);\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 8,
+									"name": "func",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"text": "需要去抖的函数."
+									},
+									"type": {
+										"type": "reference",
+										"name": "Function"
+									}
+								},
+								{
+									"id": 9,
+									"name": "wait",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									},
+									"defaultValue": "1000"
+								},
+								{
+									"id": 10,
+									"name": "options",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "IOptions"
+									},
+									"defaultValue": "..."
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "Function"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						6
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "debounce.ts",
+					"line": 3,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 11,
+			"name": "formatnumber",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 12,
+					"name": "default",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "formatnumber.ts",
+							"line": 13,
+							"character": 9
+						}
+					],
+					"signatures": [
+						{
+							"id": 13,
+							"name": "default",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"returns": "//返回",
+								"tags": [
+									{
+										"tag": "date:",
+										"text": "2022-04-02 16:46:28\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 14,
+									"name": "num",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"text": "//"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						12
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "formatnumber.ts",
+					"line": 13,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 15,
+			"name": "main",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 16,
+					"name": "default",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "main.ts",
+							"line": 11,
+							"character": 0
+						}
+					],
+					"signatures": [
+						{
+							"id": 17,
+							"name": "default",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						16
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "main.ts",
+					"line": 7,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 18,
+			"name": "throttle",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 19,
+					"name": "default",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "throttle.ts",
+							"line": 24,
+							"character": 24
+						}
+					],
+					"signatures": [
+						{
+							"id": 20,
+							"name": "default",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"tags": [
+									{
+										"tag": "date:",
+										"text": "2022-04-02 10:57:20\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 21,
+									"name": "func",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {},
+									"type": {
+										"type": "reference",
+										"name": "Function"
+									}
+								},
+								{
+									"id": 22,
+									"name": "wait",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								},
+								{
+									"id": 23,
+									"name": "options",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {},
+									"type": {
+										"type": "reference",
+										"name": "IOptions"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "Function"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						19
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "throttle.ts",
+					"line": 7,
+					"character": 0
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Modules",
+			"kind": 1,
+			"children": [
+				24,
+				1,
+				5,
+				11,
+				15,
+				18
+			]
+		}
+	]
+}
