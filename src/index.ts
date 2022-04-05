@@ -1,14 +1,11 @@
 /*
  * @Author: t_winkjqzhang
  * @Date: 2022-04-02 15:01:30
- * @LastEditTime: 2022-04-02 15:05:42
+ * @LastEditTime: 2022-04-02 17:55:09
  * @Description: Do not edit
  */
-import throttle from "./throttle";
-import UrlGetRequest from "./UrlGetRequest";
-import debounce from "./debounce";
-module.exports = {
-  throttle,
-  UrlGetRequest,
-  debounce,
-};
+export *  from "./throttle";
+export *  from "./UrlGetRequest";
+export *  from "./debounce";
+export *  from "./changefilesize";
+export *  from "./formatnumber";

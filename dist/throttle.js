@@ -1,3 +1,7 @@
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
 /**
  * @param {Function} func
  * @param {number} wait
@@ -6,25 +10,25 @@
  * @Date: 2022-04-02 10:57:20
  */
 function throttle(func, wait, options) {
-    let timeout = null, context = null, args = null; // result
-    let previous = 0;
+    var timeout = null, context = null, args = null; // result
+    var previous = 0;
     if (!options)
         options = {
             leading: true,
             trailing: true,
         };
-    const later = function () {
+    var later = function () {
         previous = options.leading === false ? 0 : new Date().getTime();
         timeout = null;
         func.apply(context, args);
         if (!timeout)
             context = args = null;
     };
-    const throttled = function () {
-        const now = new Date().getTime();
+    var throttled = function () {
+        var now = new Date().getTime();
         if (!previous && options.leading === false)
             previous = now;
-        const remaining = wait - (now - previous);
+        var remaining = wait - (now - previous);
         context = this;
         args = arguments;
         if (remaining <= 0 || remaining > wait) {
@@ -41,7 +45,7 @@ function throttle(func, wait, options) {
             timeout = setTimeout(later, remaining);
         }
     };
-    throttled.cancel = () => {
+    throttled.cancel = function () {
         clearTimeout(timeout);
         previous = 0;
         timeout = null;
@@ -49,4 +53,5 @@ function throttle(func, wait, options) {
     return throttled;
 }
 
-export { throttle as default };
+exports["default"] = throttle;
+exports.throttle = throttle;

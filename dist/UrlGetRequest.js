@@ -1,7 +1,9 @@
+'use strict';
+
 /*
  * @Author: t_winkjqzhang
  * @Date: 2022-03-31 15:54:59
- * @LastEditTime: 2022-04-02 15:41:18
+ * @LastEditTime: 2022-04-02 17:57:27
  * @Description: Do not edit
  */
 //分离url参数，获取tagid
@@ -13,7 +15,7 @@
  * @Description:url分离出参数
  */
 function UrlGetRequest(url, variable) {
-    let query = url.split("?")[1];
+    var query = url.split("?")[1];
     // let query: string = window.location.search.substring(1);
     // 兼容微信授权回来之后 url 错乱的问题
     if (query.indexOf("&openid=") < 0 && query.indexOf("openid=") > 0) {
@@ -21,13 +23,13 @@ function UrlGetRequest(url, variable) {
             return "&" + m;
         });
     }
-    const vars = query.split("&");
-    for (let i = 0; i < vars.length; i++) {
-        const pair = vars[i].split("=");
+    var vars = query.split("&");
+    for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split("=");
         if (pair[0] === variable)
             return pair[1];
     }
     return false;
 }
 
-export { UrlGetRequest as default };
+module.exports = UrlGetRequest;

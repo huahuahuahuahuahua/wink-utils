@@ -5,7 +5,7 @@
  * @LastEditTime: 2022-04-02 15:38:31
  * @Description: Do not edit
  */
-import changefilesize from "../src/changefilesize";
+import {changefilesize} from "../src/index";
 
 describe("changefilesize", () => {
   describe("should return a filesize string", () => {

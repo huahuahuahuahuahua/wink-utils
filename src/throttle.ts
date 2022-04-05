@@ -1,7 +1,7 @@
 /*
  * @Author: t_winkjqzhang
  * @Date: 2022-03-31 15:54:52
- * @LastEditTime: 2022-04-02 15:40:36
+ * @LastEditTime: 2022-04-02 18:12:43
  * @Description: Do not edit
  */
 interface IThrottle {
@@ -21,7 +21,7 @@ interface IOptions {
  * @return {*}
  * @Date: 2022-04-02 10:57:20
  */
-export default function throttle(
+export function throttle(
   func: Function,
   wait: number,
   options: IOptions
@@ -66,3 +66,4 @@ export default function throttle(
   };
   return throttled;
 }
+export default throttle;

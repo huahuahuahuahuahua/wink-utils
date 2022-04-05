@@ -1,7 +1,7 @@
 /*
  * @Author: t_winkjqzhang
  * @Date: 2022-04-02 15:12:06
- * @LastEditTime: 2022-04-02 15:39:57
+ * @LastEditTime: 2022-04-02 17:57:05
  * @Description: Do not edit
  */
 /**
@@ -9,7 +9,7 @@
  * @return {string} size
  * @Date: 2022-04-02 15:23:27
  */
-export default function changefilesize(limit: number): string {
+export function changefilesize(limit: number): string {
   var size: string = "";
   if (limit < 0.1 * 1024) {
     //小于0.1KB，则转化成B
@@ -34,3 +34,4 @@ export default function changefilesize(limit: number): string {
   }
   return size;
 }
+export default changefilesize;

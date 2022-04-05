@@ -1,7 +1,11 @@
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
 /*
  * @Author: t_winkjqzhang
  * @Date: 2022-04-02 15:12:06
- * @LastEditTime: 2022-04-02 15:39:57
+ * @LastEditTime: 2022-04-02 17:57:05
  * @Description: Do not edit
  */
 /**
@@ -37,4 +41,5 @@ function changefilesize(limit) {
     return size;
 }
 
-export { changefilesize as default };
+exports.changefilesize = changefilesize;
+exports["default"] = changefilesize;

@@ -1,7 +1,7 @@
 /*
  * @Author: t_winkjqzhang
  * @Date: 2022-03-31 15:54:59
- * @LastEditTime: 2022-04-02 15:41:18
+ * @LastEditTime: 2022-04-02 17:57:27
  * @Description: Do not edit
  */
 //分离url参数，获取tagid
@@ -13,7 +13,7 @@
  * @Date: 2022-04-02 15:03:38
  * @Description:url分离出参数
  */
-export default function UrlGetRequest(url: string, variable: string) {
+export function UrlGetRequest(url: string, variable: string) {
   let query: string = url!.split("?")[1];
   // let query: string = window.location.search.substring(1);
   // 兼容微信授权回来之后 url 错乱的问题
@@ -29,3 +29,4 @@ export default function UrlGetRequest(url: string, variable: string) {
   }
   return false;
 }
+export default UrlGetRequest;

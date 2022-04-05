@@ -1,9 +1,5 @@
 //debounce.js
 
-var isObject = require("./isObject"), //是否是对象
-  now = require("./now"), //获取当前时间
-  toNumber = require("./toNumber"); //转为为数字
-
 var FUNC_ERROR_TEXT = "Expected a function";
 
 var nativeMax = Math.max, //原生最大值方法
@@ -42,7 +38,11 @@ interface IOptions {
  * // Cancel the trailing debounced invocation.
  * jQuery(window).on('popstate', debounced.cancel);
  */
-export default function debounce(
+
+export function isObject(obj) {
+  return typeof obj == "object";
+}
+export function debounce(
   func: Function,
   wait: number = 1000,
   options: IOptions = { leading: true, trailing: true, maxWait: 100000 }
@@ -61,13 +61,11 @@ export default function debounce(
   if (typeof func != "function") {
     throw new TypeError(FUNC_ERROR_TEXT);
   }
-  wait = toNumber(wait) || 0;
+  wait = Number(wait) || 0;
   if (isObject(options)) {
     leading = !!options.leading;
     maxing = "maxWait" in options;
-    maxWait = maxing
-      ? nativeMax(toNumber(options.maxWait) || 0, wait)
-      : maxWait;
+    maxWait = maxing ? nativeMax(Number(options.maxWait) || 0, wait) : maxWait;
     trailing = "trailing" in options ? !!options.trailing : trailing;
   }
 
@@ -113,7 +111,7 @@ export default function debounce(
 
   function timerExpired() {
     //刷新timer
-    var time = now();
+    var time = new Date();
     if (shouldInvoke(time)) {
       //如果可以调用，调用trailingEdge
       return trailingEdge(time);
@@ -146,11 +144,11 @@ export default function debounce(
 
   function flush() {
     //直接执行
-    return timerId === undefined ? result : trailingEdge(now());
+    return timerId === undefined ? result : trailingEdge(new Date());
   }
 
   function debounced(this: any) {
-    var time = now(),
+    var time = new Date(),
       isInvoking = shouldInvoke(time); //判断是否可以调用
 
     lastArgs = arguments; //得到参数
@@ -178,3 +176,6 @@ export default function debounce(
   debounced.flush = flush;
   return debounced;
 }
+export default {
+  debounce,
+};

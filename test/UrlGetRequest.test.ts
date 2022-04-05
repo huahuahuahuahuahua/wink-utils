@@ -4,7 +4,7 @@
  * @LastEditTime: 2022-04-02 15:19:35
  * @Description: Do not edit
  */
-import UrlGetRequest from "../src/UrlGetRequest";
+import {UrlGetRequest} from "../src/index";
 // import assert from "assert";
 
 describe("UrlGetRequest", () => {

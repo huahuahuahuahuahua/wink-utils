@@ -1,23 +1,38 @@
 {
-  "name": "@kugou/sings-utils",
-  "version": "1.0.0",
-  "main": "dist/umd/utils.js",
-  "repository": "git@git.kgidc.cn:fe-lib/rollup-standard-module.git",
+  "name": "sings-utils",
+  "version": "1.0.2",
+  "main": "dist/umd/index.js",
+  "typings": "types/index.d.ts",
+  "module": "dist/umd/index.esm.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huahuahuahuahuahua/sings-utils.git"
+  },
   "author": "张坚泉",
   "license": "MIT",
-  "_location": "/@kugou/sings-utils",
+  "_location": "/sings-utils",
   "_need_handle_files": [
     "debounce",
     "changefilesize",
     "formatnumber",
     "throttle",
-    "UrlGetRequest"
+    "UrlGetRequest",
+    "index"
+  ],
+  "files": [
+    "dist",
+    "test",
+    "docs",
+    "LICENSE",
+    "CHANGELOG.md",
+    "README.md"
   ],
   "scripts": {
     "build": "gulp build",
     "start": "vite",
     "dev": "gulp dev",
     "doc": "gulp doc",
+    "publish": "npm test && npm build && npm publish",
     "test": "jest --coverage --verbose -u"
   },
   "devDependencies": {
@@ -43,7 +58,7 @@
     "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
     "gulp-cli": "^2.3.0",
-    "gulp-typedoc": "^3.0.1",
+    "gulp-typedoc": "^3.0.2",
     "jest": "^27.5.1",
     "parcel-bundler": "^1.12.5",
     "rollup": "^2.70.1",
@@ -60,7 +75,11 @@
     "ts-jest": "^27.1.4",
     "tslib": "^2.3.0",
     "typedoc": "^0.21.5",
-    "typedoc-plugin-markdown": "^3.10.4"
+    "typedoc-plugin-markdown": "^3.11.14"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "description": "工具库",
   "dependencies": {

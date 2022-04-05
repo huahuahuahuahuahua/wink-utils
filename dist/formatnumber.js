@@ -1,7 +1,11 @@
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
 /*
  * @Author: t_winkjqzhang
  * @Date: 2022-04-02 16:18:36
- * @LastEditTime: 2022-04-02 16:46:30
+ * @LastEditTime: 2022-04-02 17:58:19
  * @Description:
  */
 /**
@@ -51,5 +55,9 @@ function formatNumber(num) {
         return "error 请输入1-10000000000 的数字";
     }
 }
+var formatnumber = {
+    formatNumber: formatNumber
+};
 
-export { formatNumber as default };
+exports["default"] = formatnumber;
+exports.formatNumber = formatNumber;

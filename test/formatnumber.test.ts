@@ -4,7 +4,7 @@
  * @LastEditTime: 2022-04-02 16:45:45
  * @Description:
  */
-import formatNumber from "../src/formatNumber";
+import {formatNumber} from "../src/index";
 
 describe("formatNumber", () => {
   describe("should return a formatNumber string", () => {

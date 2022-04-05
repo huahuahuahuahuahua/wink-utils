@@ -1,7 +1,7 @@
 /*
  * @Author: t_winkjqzhang
  * @Date: 2022-04-02 16:18:36
- * @LastEditTime: 2022-04-02 16:46:30
+ * @LastEditTime: 2022-04-02 17:58:19
  * @Description:
  */
 /**
@@ -10,7 +10,7 @@
  * @Date: 2022-04-02 16:46:28
  */
 
-function formatNumber(num: number): string {
+export function formatNumber(num: number): string {
   num = Number(num);
   if (num === 0) {
     return num.toString();
@@ -46,4 +46,6 @@ function formatNumber(num: number): string {
     return "error 请输入1-10000000000 的数字";
   }
 }
-export default formatNumber;
+export default {
+  formatNumber
+};
