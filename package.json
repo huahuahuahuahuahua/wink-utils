@@ -1,6 +1,6 @@
 {
   "name": "sings-utils",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "dist/umd/index.js",
   "typings": "types/index.d.ts",
   "module": "dist/umd/index.esm.js",
