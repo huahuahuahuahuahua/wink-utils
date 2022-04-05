@@ -1,1 +1,486 @@
-{"id":"Ac8N","dependencies":[{"name":"C:\\Users\\10177\\Desktop\\sings-utils\\tsconfig.json","includedInParent":true,"mtime":1649161968473},{"name":"C:\\Users\\10177\\Desktop\\sings-utils\\.babelrc","includedInParent":true,"mtime":1648708478000},{"name":"C:\\Users\\10177\\Desktop\\sings-utils\\package.json","includedInParent":true,"mtime":1649168921744}],"generated":{"js":"\"use strict\";function e(e,t){var r=e.split(\"?\")[1];r.indexOf(\"&openid=\")<0&&r.indexOf(\"openid=\")>0&&(r=r.replace(/openid=/,function(e){return\"&\"+e}));for(var i=r.split(\"&\"),n=0;n<i.length;n++){var o=i[n].split(\"=\");if(o[0]===t)return o[1]}return!1}Object.defineProperty(exports,\"__esModule\",{value:!0}),exports.UrlGetRequest=e,exports.default=void 0;var t=e;exports.default=t;"},"sourceMaps":{"js":{"mappings":[{"source":"UrlGetRequest.ts","name":null,"original":{"line":32,"column":15},"generated":{"line":1,"column":0}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":16,"column":6},"generated":{"line":1,"column":13}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":16,"column":16},"generated":{"line":1,"column":22}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":16,"column":30},"generated":{"line":1,"column":24}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":16,"column":43},"generated":{"line":1,"column":26}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":17,"column":6},"generated":{"line":1,"column":29}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":17,"column":6},"generated":{"line":1,"column":33}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":17,"column":22},"generated":{"line":1,"column":35}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":17,"column":27},"generated":{"line":1,"column":37}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":17,"column":33},"generated":{"line":1,"column":43}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":17,"column":38},"generated":{"line":1,"column":48}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":20,"column":6},"generated":{"line":1,"column":51}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":20,"column":12},"generated":{"line":1,"column":53}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":20,"column":20},"generated":{"line":1,"column":61}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":20,"column":34},"generated":{"line":1,"column":73}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":20,"column":39},"generated":{"line":1,"column":76}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":20,"column":45},"generated":{"line":1,"column":78}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":20,"column":53},"generated":{"line":1,"column":86}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":20,"column":66},"generated":{"line":1,"column":97}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":21,"column":4},"generated":{"line":1,"column":101}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":21,"column":12},"generated":{"line":1,"column":103}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":21,"column":18},"generated":{"line":1,"column":105}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":21,"column":26},"generated":{"line":1,"column":113}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":21,"column":37},"generated":{"line":1,"column":123}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":21,"column":47},"generated":{"line":1,"column":132}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":22,"column":13},"generated":{"line":1,"column":135}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":22,"column":13},"generated":{"line":1,"column":141}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":22,"column":19},"generated":{"line":1,"column":145}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":26,"column":7},"generated":{"line":1,"column":150}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":25,"column":8},"generated":{"line":1,"column":154}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":25,"column":8},"generated":{"line":1,"column":158}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":25,"column":25},"generated":{"line":1,"column":160}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":25,"column":31},"generated":{"line":1,"column":162}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":25,"column":37},"generated":{"line":1,"column":168}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":26,"column":11},"generated":{"line":1,"column":173}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":26,"column":15},"generated":{"line":1,"column":175}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":26,"column":18},"generated":{"line":1,"column":177}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":26,"column":22},"generated":{"line":1,"column":179}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":26,"column":27},"generated":{"line":1,"column":181}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":26,"column":35},"generated":{"line":1,"column":188}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":26,"column":40},"generated":{"line":1,"column":192}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":27,"column":10},"generated":{"line":1,"column":193}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":27,"column":10},"generated":{"line":1,"column":197}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":27,"column":27},"generated":{"line":1,"column":199}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":27,"column":32},"generated":{"line":1,"column":201}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":27,"column":35},"generated":{"line":1,"column":204}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":27,"column":41},"generated":{"line":1,"column":210}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":28,"column":8},"generated":{"line":1,"column":215}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":28,"column":8},"generated":{"line":1,"column":218}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":28,"column":13},"generated":{"line":1,"column":220}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":28,"column":20},"generated":{"line":1,"column":225}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":28,"column":30},"generated":{"line":1,"column":227}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":28,"column":37},"generated":{"line":1,"column":234}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":28,"column":42},"generated":{"line":1,"column":236}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":30,"column":9},"generated":{"line":1,"column":239}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":30,"column":9},"generated":{"line":1,"column":246}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":32,"column":15},"generated":{"line":1,"column":248}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":32,"column":15},"generated":{"line":1,"column":255}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":32,"column":15},"generated":{"line":1,"column":270}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":32,"column":15},"generated":{"line":1,"column":278}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":32,"column":15},"generated":{"line":1,"column":291}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":32,"column":15},"generated":{"line":1,"column":292}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":32,"column":15},"generated":{"line":1,"column":299}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":32,"column":15},"generated":{"line":1,"column":303}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":32,"column":15},"generated":{"line":1,"column":311}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":32,"column":15},"generated":{"line":1,"column":325}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":32,"column":15},"generated":{"line":1,"column":327}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":32,"column":15},"generated":{"line":1,"column":335}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":32,"column":15},"generated":{"line":1,"column":348}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":32,"column":15},"generated":{"line":1,"column":350}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":32,"column":15},"generated":{"line":1,"column":354}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":32,"column":15},"generated":{"line":1,"column":356}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":32,"column":15},"generated":{"line":1,"column":358}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":32,"column":15},"generated":{"line":1,"column":366}},{"source":"UrlGetRequest.ts","name":null,"original":{"line":32,"column":15},"generated":{"line":1,"column":374}}],"sources":{"UrlGetRequest.ts":"/*\r\n * @Author: t_winkjqzhang\r\n * @Date: 2022-03-31 15:54:59\r\n * @LastEditTime: 2022-04-02 17:57:27\r\n * @Description: Do not edit\r\n */\r\n//分离url参数，获取tagid\r\n\r\n/**\r\n * @param {string} url //完整的url\r\n * @param {string} variable //param参数，键\r\n * @returns {string} //param参数，variable对应的值\r\n * @Date: 2022-04-02 15:03:38\r\n * @Description:url分离出参数\r\n */\r\nexport function UrlGetRequest(url: string, variable: string) {\r\n  let query: string = url!.split(\"?\")[1];\r\n  // let query: string = window.location.search.substring(1);\r\n  // 兼容微信授权回来之后 url 错乱的问题\r\n  if (query.indexOf(\"&openid=\") < 0 && query.indexOf(\"openid=\") > 0) {\r\n    query = query.replace(/openid=/, function (m) {\r\n      return \"&\" + m;\r\n    });\r\n  }\r\n  const vars: string[] = query.split(\"&\");\r\n  for (let i = 0; i < vars.length; i++) {\r\n    const pair: string[] = vars[i].split(\"=\");\r\n    if (pair[0] === variable) return pair[1];\r\n  }\r\n  return false;\r\n}\r\nexport default UrlGetRequest;\r\n"},"lineCount":null}},"error":null,"hash":"5d71fb247ac78c3a51d839088117af95","cacheData":{"env":{}}}
+{
+  "id": "Ac8N",
+  "dependencies": [
+    {
+      "name": "C:\\Users\\10177\\Desktop\\sings-utils\\tsconfig.json",
+      "includedInParent": true,
+      "mtime": 1649246055995
+    },
+    {
+      "name": "C:\\Users\\10177\\Desktop\\sings-utils\\.babelrc",
+      "includedInParent": true,
+      "mtime": 1649169224933
+    },
+    {
+      "name": "C:\\Users\\10177\\Desktop\\sings-utils\\package.json",
+      "includedInParent": true,
+      "mtime": 1649310573648
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";function e(e,t){var r=e.split(\"?\")[1];r.indexOf(\"&openid=\")<0&&r.indexOf(\"openid=\")>0&&(r=r.replace(/openid=/,function(e){return\"&\"+e}));for(var i=r.split(\"&\"),n=0;n<i.length;n++){var o=i[n].split(\"=\");if(o[0]===t)return o[1]}return!1}Object.defineProperty(exports,\"__esModule\",{value:!0}),exports.UrlGetRequest=e,exports.default=void 0;var t=e;exports.default=t;"
+  },
+  "sourceMaps": {
+    "js": {
+      "mappings": [
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 32, "column": 15 },
+          "generated": { "line": 1, "column": 0 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 16, "column": 6 },
+          "generated": { "line": 1, "column": 13 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 16, "column": 16 },
+          "generated": { "line": 1, "column": 22 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 16, "column": 30 },
+          "generated": { "line": 1, "column": 24 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 16, "column": 43 },
+          "generated": { "line": 1, "column": 26 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 17, "column": 6 },
+          "generated": { "line": 1, "column": 29 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 17, "column": 6 },
+          "generated": { "line": 1, "column": 33 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 17, "column": 22 },
+          "generated": { "line": 1, "column": 35 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 17, "column": 26 },
+          "generated": { "line": 1, "column": 37 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 17, "column": 32 },
+          "generated": { "line": 1, "column": 43 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 17, "column": 37 },
+          "generated": { "line": 1, "column": 48 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 20, "column": 6 },
+          "generated": { "line": 1, "column": 51 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 20, "column": 12 },
+          "generated": { "line": 1, "column": 53 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 20, "column": 20 },
+          "generated": { "line": 1, "column": 61 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 20, "column": 34 },
+          "generated": { "line": 1, "column": 73 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 20, "column": 39 },
+          "generated": { "line": 1, "column": 76 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 20, "column": 45 },
+          "generated": { "line": 1, "column": 78 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 20, "column": 53 },
+          "generated": { "line": 1, "column": 86 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 20, "column": 66 },
+          "generated": { "line": 1, "column": 97 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 21, "column": 4 },
+          "generated": { "line": 1, "column": 101 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 21, "column": 12 },
+          "generated": { "line": 1, "column": 103 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 21, "column": 18 },
+          "generated": { "line": 1, "column": 105 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 21, "column": 26 },
+          "generated": { "line": 1, "column": 113 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 21, "column": 37 },
+          "generated": { "line": 1, "column": 123 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 21, "column": 47 },
+          "generated": { "line": 1, "column": 132 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 22, "column": 13 },
+          "generated": { "line": 1, "column": 135 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 22, "column": 13 },
+          "generated": { "line": 1, "column": 141 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 22, "column": 19 },
+          "generated": { "line": 1, "column": 145 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 26, "column": 7 },
+          "generated": { "line": 1, "column": 150 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 25, "column": 8 },
+          "generated": { "line": 1, "column": 154 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 25, "column": 8 },
+          "generated": { "line": 1, "column": 158 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 25, "column": 25 },
+          "generated": { "line": 1, "column": 160 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 25, "column": 31 },
+          "generated": { "line": 1, "column": 162 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 25, "column": 37 },
+          "generated": { "line": 1, "column": 168 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 26, "column": 11 },
+          "generated": { "line": 1, "column": 173 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 26, "column": 15 },
+          "generated": { "line": 1, "column": 175 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 26, "column": 18 },
+          "generated": { "line": 1, "column": 177 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 26, "column": 22 },
+          "generated": { "line": 1, "column": 179 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 26, "column": 27 },
+          "generated": { "line": 1, "column": 181 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 26, "column": 35 },
+          "generated": { "line": 1, "column": 188 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 26, "column": 40 },
+          "generated": { "line": 1, "column": 192 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 27, "column": 10 },
+          "generated": { "line": 1, "column": 193 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 27, "column": 10 },
+          "generated": { "line": 1, "column": 197 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 27, "column": 27 },
+          "generated": { "line": 1, "column": 199 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 27, "column": 32 },
+          "generated": { "line": 1, "column": 201 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 27, "column": 35 },
+          "generated": { "line": 1, "column": 204 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 27, "column": 41 },
+          "generated": { "line": 1, "column": 210 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 28, "column": 8 },
+          "generated": { "line": 1, "column": 215 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 28, "column": 8 },
+          "generated": { "line": 1, "column": 218 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 28, "column": 13 },
+          "generated": { "line": 1, "column": 220 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 28, "column": 20 },
+          "generated": { "line": 1, "column": 225 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 28, "column": 30 },
+          "generated": { "line": 1, "column": 227 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 28, "column": 37 },
+          "generated": { "line": 1, "column": 234 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 28, "column": 42 },
+          "generated": { "line": 1, "column": 236 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 30, "column": 9 },
+          "generated": { "line": 1, "column": 239 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 30, "column": 9 },
+          "generated": { "line": 1, "column": 246 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 32, "column": 15 },
+          "generated": { "line": 1, "column": 248 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 32, "column": 15 },
+          "generated": { "line": 1, "column": 255 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 32, "column": 15 },
+          "generated": { "line": 1, "column": 270 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 32, "column": 15 },
+          "generated": { "line": 1, "column": 278 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 32, "column": 15 },
+          "generated": { "line": 1, "column": 291 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 32, "column": 15 },
+          "generated": { "line": 1, "column": 292 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 32, "column": 15 },
+          "generated": { "line": 1, "column": 299 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 32, "column": 15 },
+          "generated": { "line": 1, "column": 303 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 32, "column": 15 },
+          "generated": { "line": 1, "column": 311 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 32, "column": 15 },
+          "generated": { "line": 1, "column": 325 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 32, "column": 15 },
+          "generated": { "line": 1, "column": 327 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 32, "column": 15 },
+          "generated": { "line": 1, "column": 335 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 32, "column": 15 },
+          "generated": { "line": 1, "column": 348 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 32, "column": 15 },
+          "generated": { "line": 1, "column": 350 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 32, "column": 15 },
+          "generated": { "line": 1, "column": 354 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 32, "column": 15 },
+          "generated": { "line": 1, "column": 356 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 32, "column": 15 },
+          "generated": { "line": 1, "column": 358 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 32, "column": 15 },
+          "generated": { "line": 1, "column": 366 }
+        },
+        {
+          "source": "UrlGetRequest.ts",
+          "name": null,
+          "original": { "line": 32, "column": 15 },
+          "generated": { "line": 1, "column": 374 }
+        }
+      ],
+      "sources": {
+        "UrlGetRequest.ts": "/*\r\n * @Author: t_winkjqzhang\r\n * @Date: 2022-03-31 15:54:59\r\n * @LastEditTime: 2022-04-02 17:57:27\r\n * @Description: Do not edit\r\n */\r\n//分离url参数，获取tagid\r\n\r\n/**\r\n * @param {string} url //完整的url\r\n * @param {string} variable //param参数，键\r\n * @returns {string} //param参数，variable对应的值\r\n * @Date: 2022-04-02 15:03:38\r\n * @Description:url分离出参数\r\n */\r\nexport function UrlGetRequest(url: string, variable: string) {\r\n  let query: string = url.split(\"?\")[1];\r\n  // let query: string = window.location.search.substring(1);\r\n  // 兼容微信授权回来之后 url 错乱的问题\r\n  if (query.indexOf(\"&openid=\") < 0 && query.indexOf(\"openid=\") > 0) {\r\n    query = query.replace(/openid=/, function (m) {\r\n      return \"&\" + m;\r\n    });\r\n  }\r\n  const vars: string[] = query.split(\"&\");\r\n  for (let i = 0; i < vars.length; i++) {\r\n    const pair: string[] = vars[i].split(\"=\");\r\n    if (pair[0] === variable) return pair[1];\r\n  }\r\n  return false;\r\n}\r\nexport default UrlGetRequest;\r\n"
+      },
+      "lineCount": null
+    }
+  },
+  "error": null,
+  "hash": "6183116a5449734d93827696fc731215",
+  "cacheData": { "env": {} }
+}

@@ -1,22 +1,23 @@
 {
-  "name": "sings-utils",
-  "version": "1.0.2",
+  "name": "wink-utils",
+  "version": "1.0.0",
   "main": "dist/umd/index.js",
+  "module": "dist/esm/index.esm.js",
   "typings": "types/index.d.ts",
-  "module": "dist/umd/index.esm.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/huahuahuahuahuahua/sings-utils.git"
+    "url": "git+https://github.com/huahuahuahuahuahua/wink-utils.git"
   },
   "author": "张坚泉",
   "license": "MIT",
-  "_location": "/sings-utils",
+  "_location": "/wink-utils",
   "_need_handle_files": [
     "debounce",
     "changefilesize",
     "formatnumber",
     "throttle",
     "UrlGetRequest",
+    "cacheAsync",
     "index"
   ],
   "files": [
@@ -25,24 +26,24 @@
     "docs",
     "LICENSE",
     "CHANGELOG.md",
-    "README.md"
+    "README.md",
+    "types"
   ],
   "scripts": {
     "build": "gulp build",
-    "start": "vite",
     "dev": "gulp dev",
     "doc": "gulp doc",
-    "lint": "eslint --ext .js,.ts  ./src",
-    "lint:fix": "eslint --fix --ext .js,.ts  ./src",
+    "lint": "eslint --fix --ext  .js,.ts  ./src",
     "api": "api-extractor run",
-    "versionpatch": "gulp changelog && git add CHANGELOG.md && npm version patch",
-    "test": "jest --coverage --verbose -u",
-    "publish": "npm test &&npm lint:fix&&npm version && npm build &&npm run api&& npm publish",
-    "release": "npm test &&npm run lint:fix&& npm run build && npm run publish",
+    "updateversion": "gulp taskUpdateVersion",
+    "test": "jest  --verbose -u",
+    "coverage": "jest --coverage",
+    "release": "gulp publish",
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.6",
+    "@babel/core": "^7.17.8",
+    "@babel/plugin-transform-runtime": "^7.17.0",
     "@babel/preset-env": "^7.14.7",
     "@microsoft/api-extractor": "^7.20.0",
     "@microsoft/tsdoc": "^0.13.2",
@@ -66,7 +67,7 @@
     "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
     "gulp-cli": "^2.3.0",
-    "gulp-typedoc": "^3.0.2",
+    "gulp-typedoc": "^3.0.1",
     "husky": "^7.0.4",
     "jest": "^27.5.1",
     "lint-staged": "^12.3.7",
@@ -84,8 +85,8 @@
     "rollup-plugin-uglify": "^6.0.4",
     "ts-jest": "^27.1.4",
     "tslib": "^2.3.0",
-    "typedoc": "^0.21.5",
-    "typedoc-plugin-markdown": "^3.11.14"
+    "typedoc": "^0.22.0",
+    "typedoc-plugin-markdown": "^3.10.4"
   },
   "publishConfig": {
     "access": "public",

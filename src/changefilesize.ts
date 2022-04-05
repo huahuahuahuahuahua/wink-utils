@@ -1,7 +1,7 @@
 /*
  * @Author: t_winkjqzhang
  * @Date: 2022-04-02 15:12:06
- * @LastEditTime: 2022-04-06 01:05:37
+ * @LastEditTime: 2022-04-12 21:46:41
  * @Description: Do not edit
  */
 /**
@@ -9,7 +9,7 @@
  * @return {string} size  转换后的文件大小
  * @Date: 2022-04-02 15:23:27
  * @Description:文件转换二进制值为KB,MB...
- * 
+ *
  */
 export function changefilesize(limit: number): string {
   let size = "";
