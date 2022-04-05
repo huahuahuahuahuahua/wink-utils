@@ -5,5 +5,5 @@
  * @Date: 2022-04-02 15:03:38
  * @Description:url分离出参数
  */
-declare function UrlGetRequest(url: string, variable: string): string | false;
+export declare function UrlGetRequest(url: string, variable: string): string | false;
 export default UrlGetRequest;

@@ -1,42 +1,27 @@
-'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
-var throttle_ts = require('./throttle');
-var UrlGetRequest_ts = require('./UrlGetRequest');
-var debounce_ts = require('./debounce');
-var changefilesize_ts = require('./changefilesize');
-var formatnumber_ts = require('./formatnumber');
-
-
-
-Object.keys(throttle_ts).forEach(function (k) {
-	if (k !== 'default' && !exports.hasOwnProperty(k)) Object.defineProperty(exports, k, {
-		enumerable: true,
-		get: function () { return throttle_ts[k]; }
-	});
-});
-Object.keys(UrlGetRequest_ts).forEach(function (k) {
-	if (k !== 'default' && !exports.hasOwnProperty(k)) Object.defineProperty(exports, k, {
-		enumerable: true,
-		get: function () { return UrlGetRequest_ts[k]; }
-	});
-});
-Object.keys(debounce_ts).forEach(function (k) {
-	if (k !== 'default' && !exports.hasOwnProperty(k)) Object.defineProperty(exports, k, {
-		enumerable: true,
-		get: function () { return debounce_ts[k]; }
-	});
-});
-Object.keys(changefilesize_ts).forEach(function (k) {
-	if (k !== 'default' && !exports.hasOwnProperty(k)) Object.defineProperty(exports, k, {
-		enumerable: true,
-		get: function () { return changefilesize_ts[k]; }
-	});
-});
-Object.keys(formatnumber_ts).forEach(function (k) {
-	if (k !== 'default' && !exports.hasOwnProperty(k)) Object.defineProperty(exports, k, {
-		enumerable: true,
-		get: function () { return formatnumber_ts[k]; }
-	});
-});
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+exports.__esModule = true;
+/*
+ * @Author: t_winkjqzhang
+ * @Date: 2022-04-02 15:01:30
+ * @LastEditTime: 2022-04-02 17:55:09
+ * @Description: Do not edit
+ */
+__exportStar(require("./throttle"), exports);
+__exportStar(require("./UrlGetRequest"), exports);
+__exportStar(require("./debounce"), exports);
+__exportStar(require("./changefilesize"), exports);
+__exportStar(require("./formatnumber"), exports);

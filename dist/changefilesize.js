@@ -1,7 +1,6 @@
-'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
+"use strict";
+exports.__esModule = true;
+exports.changefilesize = void 0;
 /*
  * @Author: t_winkjqzhang
  * @Date: 2022-04-02 15:12:06
@@ -40,6 +39,5 @@ function changefilesize(limit) {
     }
     return size;
 }
-
 exports.changefilesize = changefilesize;
 exports["default"] = changefilesize;

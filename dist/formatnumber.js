@@ -1,7 +1,4 @@
-'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
+"use strict";
 /*
  * @Author: t_winkjqzhang
  * @Date: 2022-04-02 16:18:36
@@ -13,6 +10,8 @@ Object.defineProperty(exports, '__esModule', { value: true });
  * @returns {string} //返回
  * @Date: 2022-04-02 16:46:28
  */
+exports.__esModule = true;
+exports.formatNumber = void 0;
 function formatNumber(num) {
     num = Number(num);
     if (num === 0) {
@@ -55,9 +54,7 @@ function formatNumber(num) {
         return "error 请输入1-10000000000 的数字";
     }
 }
-var formatnumber = {
+exports.formatNumber = formatNumber;
+exports["default"] = {
     formatNumber: formatNumber
 };
-
-exports["default"] = formatnumber;
-exports.formatNumber = formatNumber;

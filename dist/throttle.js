@@ -1,7 +1,6 @@
-'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
+"use strict";
+exports.__esModule = true;
+exports.throttle = void 0;
 /**
  * @param {Function} func
  * @param {number} wait
@@ -15,7 +14,7 @@ function throttle(func, wait, options) {
     if (!options)
         options = {
             leading: true,
-            trailing: true,
+            trailing: true
         };
     var later = function () {
         previous = options.leading === false ? 0 : new Date().getTime();
@@ -52,6 +51,5 @@ function throttle(func, wait, options) {
     };
     return throttled;
 }
-
-exports["default"] = throttle;
 exports.throttle = throttle;
+exports["default"] = throttle;

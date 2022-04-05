@@ -1,5 +1,4 @@
-'use strict';
-
+"use strict";
 /*
  * @Author: t_winkjqzhang
  * @Date: 2022-03-31 15:54:59
@@ -7,6 +6,8 @@
  * @Description: Do not edit
  */
 //分离url参数，获取tagid
+exports.__esModule = true;
+exports.UrlGetRequest = void 0;
 /**
  * @param {string} url //完整的url
  * @param {string} variable //param参数，键
@@ -31,5 +32,5 @@ function UrlGetRequest(url, variable) {
     }
     return false;
 }
-
-module.exports = UrlGetRequest;
+exports.UrlGetRequest = UrlGetRequest;
+exports["default"] = UrlGetRequest;

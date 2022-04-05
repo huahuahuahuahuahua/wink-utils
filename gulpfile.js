@@ -5,10 +5,13 @@ const { exec } = require("child_process");
 const clean = require("gulp-clean");
 const typedoc = require("gulp-typedoc");
 const pkg = require("./package.json");
-
+const conventionalChangelog = require("conventional-changelog");
 /** 需要编译的文件名（不带后缀名） */
 let inputFileNameNoExtList = pkg._need_handle_files;
-
+const paths = {
+  root: path.join(__dirname, "/"),
+  dist: path.join(__dirname, "/dist"),
+};
 /**
  * 首字母变大写
  *
@@ -223,6 +226,27 @@ const taskOutputReadme = () => {
     resolve();
   });
 };
+//读取commit 修改CHANGELOG.md
+const changelog = async (cb) => {
+  const changelogPath = path.join(paths.root, "CHANGELOG.md");
+  // 对命令 conventional-changelog -p angular -i CHANGELOG.md -w -r 0
+  const changelogPipe = await conventionalChangelog({
+    preset: "angular",
+    releaseCount: 0,
+  });
+  changelogPipe.setEncoding("utf8");
+
+  const resultArray = ["# 工具库更新日志\n\n"];
+  changelogPipe.on("data", (chunk) => {
+    // 原来的 commits 路径是进入提交列表
+    chunk = chunk.replace(/\/commits\//g, "/commit/");
+    resultArray.push(chunk);
+  });
+  changelogPipe.on("end", async () => {
+    await fs.createWriteStream(changelogPath).write(resultArray.join(""));
+    cb();
+  });
+};
 
 /** 清除 typedoc 文件 */
 const taskCleanTypedoc = () =>
@@ -261,8 +285,10 @@ exports.buildTypes = gulp.series(
 );
 exports.build = gulp.parallel(
   taskBuildTsProject,
+  changelog,
   exports.buildTypes,
   taskBuildUmd
 );
+exports.changelog = changelog;
 exports.dev = taskDev;
 exports.default = (cb) => cb();

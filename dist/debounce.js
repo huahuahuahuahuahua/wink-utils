@@ -1,8 +1,7 @@
-'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
+"use strict";
 //debounce.js
+exports.__esModule = true;
+exports.debounce = exports.isObject = void 0;
 var FUNC_ERROR_TEXT = "Expected a function";
 var nativeMax = Math.max, //原生最大值方法
 nativeMin = Math.min; //原生最小值方法
@@ -38,6 +37,7 @@ nativeMin = Math.min; //原生最小值方法
 function isObject(obj) {
     return typeof obj == "object";
 }
+exports.isObject = isObject;
 function debounce(func, wait, options) {
     if (wait === void 0) { wait = 1000; }
     if (options === void 0) { options = { leading: true, trailing: true, maxWait: 100000 }; }
@@ -151,10 +151,7 @@ function debounce(func, wait, options) {
     debounced.flush = flush;
     return debounced;
 }
-var debounce$1 = {
-    debounce: debounce,
-};
-
 exports.debounce = debounce;
-exports["default"] = debounce$1;
-exports.isObject = isObject;
+exports["default"] = {
+    debounce: debounce
+};
