@@ -14,7 +14,7 @@
  * @Description:url分离出参数
  */
 export function UrlGetRequest(url: string, variable: string) {
-  let query: string = url!.split("?")[1];
+  let query: string = url.split("?")[1];
   // let query: string = window.location.search.substring(1);
   // 兼容微信授权回来之后 url 错乱的问题
   if (query.indexOf("&openid=") < 0 && query.indexOf("openid=") > 0) {

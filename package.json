@@ -28,21 +28,23 @@
     "README.md"
   ],
   "scripts": {
-    "build": "npm test &&npm version && gulp build",
+    "build": "gulp build",
     "start": "vite",
     "dev": "gulp dev",
     "doc": "gulp doc",
     "lint": "eslint --ext .js,.ts  ./src",
     "lint:fix": "eslint --fix --ext .js,.ts  ./src",
-    "changelog": "gulp changelog",
-    "version": "npm changelog && git add CHANGELOG.md",
-    "publish": "npm build && npm publish",
+    "api": "api-extractor run",
+    "versionpatch": "gulp changelog && git add CHANGELOG.md && npm version patch",
     "test": "jest --coverage --verbose -u",
+    "publish": "npm test &&npm lint:fix&&npm version && npm build &&npm run api&& npm publish",
+    "release": "npm test &&npm run lint:fix&& npm run build && npm run publish",
     "prepare": "husky install"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.7",
+    "@microsoft/api-extractor": "^7.20.0",
     "@microsoft/tsdoc": "^0.13.2",
     "@rollup/plugin-auto-install": "^2.1.0",
     "@rollup/plugin-babel": "^5.3.0",

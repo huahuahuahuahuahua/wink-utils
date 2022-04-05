@@ -1,13 +1,13 @@
 //debounce.js
 
-var FUNC_ERROR_TEXT = "Expected a function";
+const FUNC_ERROR_TEXT = "Expected a function";
 
-var nativeMax = Math.max, //原生最大值方法
+const nativeMax = Math.max, //原生最大值方法
   nativeMin = Math.min; //原生最小值方法
 interface IOptions {
-  leading: boolean;
-  trailing: boolean;
-  maxWait: number;
+  leading?: boolean;
+  trailing?: boolean;
+  maxWait?: number;
 }
 /**
  * 函数去抖，也就是说当调用动作n毫秒后，才会执行该动作，若在这n毫秒内又调用此动作则将重新计算执行时间。
@@ -39,15 +39,15 @@ interface IOptions {
  * jQuery(window).on('popstate', debounced.cancel);
  */
 
-export function isObject(obj) {
-  return typeof obj == "object";
-}
+
+export type TAnyFunction = (...args: any[]) => void
+import isObject from './isObject'
 export function debounce(
-  func: Function,
-  wait: number = 1000,
-  options: IOptions = { leading: true, trailing: true, maxWait: 100000 }
-): Function {
-  var lastArgs, //上次调用参数
+  func: TAnyFunction,
+  wait = 1000,
+  options: IOptions = { }
+): TAnyFunction {
+  let lastArgs, //上次调用参数
     lastThis, //上次调用this
     maxWait, //最大等待时间
     result, //返回结果
@@ -71,7 +71,7 @@ export function debounce(
 
   function invokeFunc(time) {
     //调用func，参数为当前时间
-    var args = lastArgs, //调用参数
+    const args = lastArgs, //调用参数
       thisArg = lastThis; //调用的this
 
     lastArgs = lastThis = undefined; //清除lastArgs和lastThis
@@ -87,9 +87,9 @@ export function debounce(
     return leading ? invokeFunc(time) : result; //如果leading为true，调用func,否则返回result
   }
 
-  function remainingWait(time) {
+  function remainingWait(time): number{
     //设置还需要等待的时间
-    var timeSinceLastCall = time - lastCallTime, //距离上次触发的时间
+    const timeSinceLastCall = time - lastCallTime, //距离上次触发的时间
       timeSinceLastInvoke = time - lastInvokeTime, //距离上次调用func的时间
       result = wait - timeSinceLastCall; //还需要等待的时间
 
@@ -98,7 +98,7 @@ export function debounce(
 
   function shouldInvoke(time) {
     //是否应该被调用
-    var timeSinceLastCall = time - lastCallTime, //距离上次触发时间的时间
+    const timeSinceLastCall = time - lastCallTime, //距离上次触发时间的时间
       timeSinceLastInvoke = time - lastInvokeTime; //距离上次调用func的时间
 
     return (
@@ -111,7 +111,7 @@ export function debounce(
 
   function timerExpired() {
     //刷新timer
-    var time = new Date();
+    const time = new Date();
     if (shouldInvoke(time)) {
       //如果可以调用，调用trailingEdge
       return trailingEdge(time);
@@ -148,7 +148,7 @@ export function debounce(
   }
 
   function debounced(this: any) {
-    var time = new Date(),
+    const time = new Date(),
       isInvoking = shouldInvoke(time); //判断是否可以调用
 
     lastArgs = arguments; //得到参数

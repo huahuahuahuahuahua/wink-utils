@@ -1,46 +1,14 @@
 "use strict";
 //debounce.js
 exports.__esModule = true;
-exports.debounce = exports.isObject = void 0;
+exports.debounce = void 0;
 var FUNC_ERROR_TEXT = "Expected a function";
 var nativeMax = Math.max, //原生最大值方法
 nativeMin = Math.min; //原生最小值方法
-/**
- * 函数去抖，也就是说当调用动作n毫秒后，才会执行该动作，若在这n毫秒内又调用此动作则将重新计算执行时间。
- *
- * @param {Function} func 需要去抖的函数.
- * @param {number} [wait=0] 延迟执行的时间.
- * @param {Object} [options={}] 选项对象.
- * @param {boolean} [options.leading=false] 指定是否在超时前调用.
- * @param {number} [options.maxWait] func延迟调用的最大时间.
- * @param {boolean} [options.trailing=true] 指定是否在超时后调用.
- * @returns {Function} 返回去抖之后的函数.
- * @example
- *
- * // Avoid costly calculations while the window size is in flux.
- * jQuery(window).on('resize', _.debounce(calculateLayout, 150));
- *
- * // Invoke `sendMail` when clicked, debouncing subsequent calls.
- * jQuery(element).on('click', _.debounce(sendMail, 300, {
- *   'leading': true,
- *   'trailing': false
- * }));
- *
- * // Ensure `batchLog` is invoked once after 1 second of debounced calls.
- * var debounced = _.debounce(batchLog, 250, { 'maxWait': 1000 });
- * var source = new EventSource('/stream');
- * jQuery(source).on('message', debounced);
- *
- * // Cancel the trailing debounced invocation.
- * jQuery(window).on('popstate', debounced.cancel);
- */
-function isObject(obj) {
-    return typeof obj == "object";
-}
-exports.isObject = isObject;
+var isObject_1 = require("./isObject");
 function debounce(func, wait, options) {
     if (wait === void 0) { wait = 1000; }
-    if (options === void 0) { options = { leading: true, trailing: true, maxWait: 100000 }; }
+    if (options === void 0) { options = {}; }
     var lastArgs, //上次调用参数
     lastThis, //上次调用this
     maxWait, //最大等待时间
@@ -55,7 +23,7 @@ function debounce(func, wait, options) {
         throw new TypeError(FUNC_ERROR_TEXT);
     }
     wait = Number(wait) || 0;
-    if (isObject(options)) {
+    if ((0, isObject_1["default"])(options)) {
         leading = !!options.leading;
         maxing = "maxWait" in options;
         maxWait = maxing ? nativeMax(Number(options.maxWait) || 0, wait) : maxWait;

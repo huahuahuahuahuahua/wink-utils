@@ -9,6 +9,7 @@ exports.throttle = void 0;
  * @Date: 2022-04-02 10:57:20
  */
 function throttle(func, wait, options) {
+    if (options === void 0) { options = {}; }
     var timeout = null, context = null, args = null; // result
     var previous = 0;
     if (!options)

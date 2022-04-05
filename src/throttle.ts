@@ -1,18 +1,12 @@
 /*
  * @Author: t_winkjqzhang
  * @Date: 2022-03-31 15:54:52
- * @LastEditTime: 2022-04-02 18:12:43
+ * @LastEditTime: 2022-04-06 00:39:25
  * @Description: Do not edit
  */
-interface IThrottle {
-  func: Function;
-  wait: number;
-  options: IOptions;
-}
-
 interface IOptions {
-  leading: boolean;
-  trailing: boolean;
+  leading?: boolean;
+  trailing?: boolean;
 }
 /**
  * @param {Function} func
@@ -24,12 +18,12 @@ interface IOptions {
 export function throttle(
   func: Function,
   wait: number,
-  options: IOptions
+  options: IOptions={}
 ): Function {
   let timeout: any | null = null,
     context: object | any = null,
     args: any = null; // result
-  let previous: number = 0;
+  let previous = 0;
   if (!options)
     options = {
       leading: true,
@@ -41,7 +35,7 @@ export function throttle(
     func.apply(context, args);
     if (!timeout) context = args = null;
   };
-  const throttled = function (this: any) {
+  const throttled = function (this) {
     const now = new Date().getTime();
     if (!previous && options.leading === false) previous = now;
     const remaining = wait - (now - previous);

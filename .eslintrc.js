@@ -1,17 +1,8 @@
-/*
- * @Author: t_winkjqzhang
- * @Date: 2022-04-02 14:14:13
- * @LastEditTime: 2022-04-02 14:17:23
- * @Description: Do not edit
- */
 // .eslintrc.js
 const eslintrc = {
+  root: true,
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint"],
-  include: [
-    // ...
-    "babel.config.js",
-  ],
   overrides: [
     {
       files: ["*.ts", "*.tsx"], // Your TypeScript files extension
@@ -30,8 +21,9 @@ const eslintrc = {
     },
   ],
   extends: [
-    "eslint:recommended", // eslint 推荐规则
-    "plugin:@typescript-eslint/recommended", // ts 推荐规则
+    // "eslint:recommended", // eslint 推荐规则
+    // "plugin:@typescript-eslint/recommended", // ts 推荐规则
+    // "plugin:@typescript-eslint/eslint-recommended",
   ],
   env: {
     browser: true,

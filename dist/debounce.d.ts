@@ -1,7 +1,7 @@
 interface IOptions {
-    leading: boolean;
-    trailing: boolean;
-    maxWait: number;
+    leading?: boolean;
+    trailing?: boolean;
+    maxWait?: number;
 }
 /**
  * 函数去抖，也就是说当调用动作n毫秒后，才会执行该动作，若在这n毫秒内又调用此动作则将重新计算执行时间。
@@ -32,8 +32,8 @@ interface IOptions {
  * // Cancel the trailing debounced invocation.
  * jQuery(window).on('popstate', debounced.cancel);
  */
-export declare function isObject(obj: any): boolean;
-export declare function debounce(func: Function, wait?: number, options?: IOptions): Function;
+export declare type TAnyFunction = (...args: any[]) => void;
+export declare function debounce(func: TAnyFunction, wait?: number, options?: IOptions): TAnyFunction;
 declare const _default: {
     debounce: typeof debounce;
 };

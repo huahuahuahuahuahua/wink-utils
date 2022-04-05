@@ -8,6 +8,7 @@ const pkg = require("./package.json");
 const conventionalChangelog = require("conventional-changelog");
 /** 需要编译的文件名（不带后缀名） */
 let inputFileNameNoExtList = pkg._need_handle_files;
+let version = pkg._version;
 const paths = {
   root: path.join(__dirname, "/"),
   dist: path.join(__dirname, "/dist"),
@@ -227,7 +228,7 @@ const taskOutputReadme = () => {
   });
 };
 //读取commit 修改CHANGELOG.md
-const changelog = async (cb) => {
+const taskchangelog = async (cb) => {
   const changelogPath = path.join(paths.root, "CHANGELOG.md");
   // 对命令 conventional-changelog -p angular -i CHANGELOG.md -w -r 0
   const changelogPipe = await conventionalChangelog({
@@ -271,7 +272,7 @@ const taskOutputTypedoc = () => {
 };
 
 /** type doc 任务 */
-const taskTypedoc = gulp.series(taskCleanTypedoc, taskOutputTypedoc);
+const taskTypedoc = gulp.series(taskCleanTypedoc); //taskOutputTypedoc
 
 /** 调试 */
 const taskDev = () => gulp.watch(["./src/*.ts"], taskBuildUmd);
@@ -285,10 +286,10 @@ exports.buildTypes = gulp.series(
 );
 exports.build = gulp.parallel(
   taskBuildTsProject,
-  changelog,
+  taskchangelog,
   exports.buildTypes,
   taskBuildUmd
 );
-exports.changelog = changelog;
+exports.changelog = taskchangelog;
 exports.dev = taskDev;
 exports.default = (cb) => cb();

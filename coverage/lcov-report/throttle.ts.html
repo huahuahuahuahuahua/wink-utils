@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">5.55% </span>
+                <span class="strong">5.4% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/36</span>
+                <span class='fraction'>2/37</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/16</span>
+                <span class='fraction'>0/17</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">6.06% </span>
+                <span class="strong">5.88% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/33</span>
+                <span class='fraction'>2/34</span>
             </div>
         
             
@@ -126,13 +126,7 @@
 <a name='L61'></a><a href='#L61'>61</a>
 <a name='L62'></a><a href='#L62'>62</a>
 <a name='L63'></a><a href='#L63'>63</a>
-<a name='L64'></a><a href='#L64'>64</a>
-<a name='L65'></a><a href='#L65'>65</a>
-<a name='L66'></a><a href='#L66'>66</a>
-<a name='L67'></a><a href='#L67'>67</a>
-<a name='L68'></a><a href='#L68'>68</a>
-<a name='L69'></a><a href='#L69'>69</a>
-<a name='L70'></a><a href='#L70'>70</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L64'></a><a href='#L64'>64</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -149,16 +143,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -200,22 +188,16 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
  * @Author: t_winkjqzhang
  * @Date: 2022-03-31 15:54:52
- * @LastEditTime: 2022-04-02 18:12:43
+ * @LastEditTime: 2022-04-06 00:39:25
  * @Description: Do not edit
  */
-interface IThrottle {
-  func: Function;
-  wait: number;
-  options: IOptions;
-}
-&nbsp;
 interface IOptions {
-  leading: boolean;
-  trailing: boolean;
+  leading?: boolean;
+  trailing?: boolean;
 }
 /**
  * @param {Function} func
@@ -227,12 +209,12 @@ interface IOptions {
 export function <span class="fstat-no" title="function not covered" >throttle(</span>
   func: Function,
   wait: number,
-  options: IOptions
+<span class="cstat-no" title="statement not covered" >  <span class="missing-if-branch" title="if path not taken" >I</span>options: IOptions={}</span>
 ): Function {
   let timeout: any | null = <span class="cstat-no" title="statement not covered" >null,</span>
     context: object | any = <span class="cstat-no" title="statement not covered" >null,</span>
     args: any = <span class="cstat-no" title="statement not covered" >null;</span> // result
-  let previous: number = <span class="cstat-no" title="statement not covered" >0;</span>
+  let previous = <span class="cstat-no" title="statement not covered" >0;</span>
 <span class="cstat-no" title="statement not covered" >  <span class="missing-if-branch" title="if path not taken" >I</span>if (!options)</span>
 <span class="cstat-no" title="statement not covered" >    options = {</span>
       leading: true,
@@ -244,7 +226,7 @@ export function <span class="fstat-no" title="function not covered" >throttle(</
 <span class="cstat-no" title="statement not covered" >    func.apply(context, args);</span>
 <span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (!timeout) <span class="cstat-no" title="statement not covered" >context = args = null;</span></span>
   };
-  const throttled = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function (this: any) {</span></span>
+  const throttled = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function (this) {</span></span>
     const now = <span class="cstat-no" title="statement not covered" >new Date().getTime();</span>
 <span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (!previous &amp;&amp; options.leading === false) <span class="cstat-no" title="statement not covered" >previous = now;</span></span>
     const remaining = <span class="cstat-no" title="statement not covered" >wait - (now - previous);</span>
@@ -277,7 +259,7 @@ export default throttle;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Tue Apr 05 2022 22:28:59 GMT+0800 (中国标准时间)
+                at Wed Apr 06 2022 01:26:08 GMT+0800 (中国标准时间)
             </div>
         <script src="prettify.js"></script>
         <script>
