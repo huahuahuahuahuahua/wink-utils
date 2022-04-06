@@ -29,15 +29,14 @@
   ],
   "scripts": {
     "build": "gulp build",
-    "start": "vite",
     "dev": "gulp dev",
     "doc": "gulp doc",
     "lint": "eslint --fix --ext  .js,.ts  ./src",
     "api": "api-extractor run",
     "updateversion": "gulp taskUpdateVersion",
-    "test": "jest --coverage --verbose -u",
-    "publish": "npm test &&npm lint&&npm version && npm build &&npm run api&& npm publish",
-    "release": "npm test&& gulp publish",
+    "test": "jest  --verbose -u",
+    "coverage": "jest --coverage",
+    "release": "gulp publish",
     "prepare": "husky install"
   },
   "devDependencies": {
