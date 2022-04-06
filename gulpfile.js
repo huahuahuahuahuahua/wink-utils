@@ -11,6 +11,7 @@ let inputFileNameNoExtList = pkg._need_handle_files;
 let version = pkg._version;
 const paths = {
   root: path.join(__dirname, "/"),
+  src: path.join(__dirname, "src"),
   dist: path.join(__dirname, "/dist"),
 };
 /**
@@ -261,6 +262,11 @@ const taskOutputTypedoc = () => {
       // NOTE: the out option and the json option cannot share the same directory
       out: "./docs/",
       json: "./typedoc.file.json",
+      exclude: ["node_modules", "**/*+(index|.worker|.e2e).ts"],
+      // TypeScript options (see typescript docs)
+      // Output options (see typedoc docs)
+      // TypeDoc options (see typedoc docs)
+      version: true,
 
       // // TypeDoc options (see TypeDoc docs http://typedoc.org/api/interfaces/typedocoptionmap.html)
       // name: 'my-project',
@@ -270,9 +276,57 @@ const taskOutputTypedoc = () => {
     })
   );
 };
+const taskeslint = () => {
+  return new Promise(function (resolve, reject) {
+    const cmdStr = `${path.resolve(
+      "./node_modules/.bin/eslint"
+    )} --fix --ext .js,.ts  ${paths.src}`;
+    exec(cmdStr, (err, stdout, stderr) => {
+      if (err) {
+        console.log(err);
+        console.warn(new Date(), " eslint编译命令执行失败");
+      } else {
+        console.log(stdout);
+        console.warn(new Date(), " eslint编译命令执行成功");
+      }
+    });
 
+    resolve();
+  });
+};
+const taskUpdateVersion = () => {
+  return new Promise(function (resolve, reject) {
+    //更新版本
+    exec(`npm version patch`, (err, stdout, stderr) => {
+      if (err) {
+        reject(err);
+        console.error(new Date(), "请检查文件是否为最新");
+        throw new Error(" 更新版本命令执行失败");
+      } else {
+        console.log(stdout);
+        console.warn(new Date(), " 更新版本命令执行成功");
+      }
+    });
+    resolve();
+  });
+};
+const taskPublish = () => {
+  return new Promise((resolve, reject) => {
+    //发布版本
+    exec(`npm publish`, (err, stdout, stderr) => {
+      if (err) {
+        reject(err);
+        throw new Error(new Date(), " 发布版本命令执行失败");
+      } else {
+        console.log(stdout);
+        console.warn(new Date(), " 发布版本命令执行成功");
+      }
+    });
+    resolve();
+  });
+};
 /** type doc 任务 */
-const taskTypedoc = gulp.series(taskCleanTypedoc); //taskOutputTypedoc
+const taskTypedoc = gulp.series(taskCleanTypedoc, taskOutputTypedoc); //taskOutputTypedoc
 
 /** 调试 */
 const taskDev = () => gulp.watch(["./src/*.ts"], taskBuildUmd);
@@ -290,6 +344,13 @@ exports.build = gulp.parallel(
   exports.buildTypes,
   taskBuildUmd
 );
+exports.publish = gulp.series(
+  taskUpdateVersion,
+  taskeslint,
+  exports.build,
+  taskPublish
+);
+exports.taskUpdateVersion = taskUpdateVersion;
 exports.changelog = taskchangelog;
 exports.dev = taskDev;
 exports.default = (cb) => cb();

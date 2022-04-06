@@ -1,27 +1,27 @@
 {
 	"id": 0,
-	"name": "@kugou/sings-utils",
+	"name": "sings-utils",
 	"kind": 0,
 	"flags": {},
 	"originalName": "",
 	"children": [
 		{
-			"id": 77,
+			"id": 51,
 			"name": "UrlGetRequest",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 82,
+					"id": 56,
 					"name": "default",
 					"kind": 16777216,
 					"kindString": "Reference",
 					"flags": {},
-					"target": 46
+					"target": 52
 				},
 				{
-					"id": 78,
+					"id": 52,
 					"name": "UrlGetRequest",
 					"kind": 64,
 					"kindString": "Function",
@@ -35,7 +35,7 @@
 					],
 					"signatures": [
 						{
-							"id": 79,
+							"id": 53,
 							"name": "UrlGetRequest",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -55,7 +55,7 @@
 							},
 							"parameters": [
 								{
-									"id": 80,
+									"id": 54,
 									"name": "url",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -69,7 +69,7 @@
 									}
 								},
 								{
-									"id": 81,
+									"id": 55,
 									"name": "variable",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -105,14 +105,14 @@
 					"title": "References",
 					"kind": 16777216,
 					"children": [
-						82
+						56
 					]
 				},
 				{
 					"title": "Functions",
 					"kind": 64,
 					"children": [
-						78
+						52
 					]
 				}
 			],
@@ -148,7 +148,7 @@
 					"sources": [
 						{
 							"fileName": "changefilesize.ts",
-							"line": 12,
+							"line": 14,
 							"character": 16
 						}
 					],
@@ -160,11 +160,15 @@
 							"kindString": "Call signature",
 							"flags": {},
 							"comment": {
-								"returns": "size",
+								"returns": "size  转换后的文件大小",
 								"tags": [
 									{
 										"tag": "date:",
-										"text": "2022-04-02 15:23:27\n"
+										"text": "2022-04-02 15:23:27"
+									},
+									{
+										"tag": "description:文件转换二进制值为kb,mb...",
+										"text": "\n\n"
 									}
 								]
 							},
@@ -175,7 +179,9 @@
 									"kind": 32768,
 									"kindString": "Parameter",
 									"flags": {},
-									"comment": {},
+									"comment": {
+										"text": "二进制文件大小"
+									},
 									"type": {
 										"type": "intrinsic",
 										"name": "number"
@@ -209,7 +215,7 @@
 			"sources": [
 				{
 					"fileName": "changefilesize.ts",
-					"line": 12,
+					"line": 14,
 					"character": 0
 				}
 			]
@@ -222,7 +228,83 @@
 			"flags": {},
 			"children": [
 				{
-					"id": 15,
+					"id": 12,
+					"name": "TAnyFunction",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "debounce.ts",
+							"line": 43,
+							"character": 12
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 13,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"comment": {
+								"shortText": "函数去抖，也就是说当调用动作n毫秒后，才会执行该动作，若在这n毫秒内又调用此动作则将重新计算执行时间。",
+								"returns": "返回去抖之后的函数.",
+								"tags": [
+									{
+										"tag": "example",
+										"text": "\n\n// Avoid costly calculations while the window size is in flux.\njQuery(window).on('resize', _.debounce(calculateLayout, 150));\n\n// Invoke `sendMail` when clicked, debouncing subsequent calls.\njQuery(element).on('click', _.debounce(sendMail, 300, {\n  'leading': true,\n  'trailing': false\n}));\n\n// Ensure `batchLog` is invoked once after 1 second of debounced calls.\nvar debounced = _.debounce(batchLog, 250, { 'maxWait': 1000 });\nvar source = new EventSource('/stream');\njQuery(source).on('message', debounced);\n\n// Cancel the trailing debounced invocation.\njQuery(window).on('popstate', debounced.cancel);\n"
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "debounce.ts",
+									"line": 43,
+									"character": 27
+								}
+							],
+							"signatures": [
+								{
+									"id": 14,
+									"name": "__type",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"shortText": "函数去抖，也就是说当调用动作n毫秒后，才会执行该动作，若在这n毫秒内又调用此动作则将重新计算执行时间。",
+										"returns": "返回去抖之后的函数."
+									},
+									"parameters": [
+										{
+											"id": 15,
+											"name": "args",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isRest": true
+											},
+											"type": {
+												"type": "array",
+												"elementType": {
+													"type": "intrinsic",
+													"name": "any"
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 16,
 					"name": "default",
 					"kind": 1024,
 					"kindString": "Property",
@@ -230,14 +312,14 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 16,
+							"id": 17,
 							"name": "__type",
 							"kind": 65536,
 							"kindString": "Type literal",
 							"flags": {},
 							"children": [
 								{
-									"id": 17,
+									"id": 18,
 									"name": "debounce",
 									"kind": 1024,
 									"kindString": "Property",
@@ -245,32 +327,33 @@
 									"type": {
 										"type": "reflection",
 										"declaration": {
-											"id": 18,
+											"id": 19,
 											"name": "__type",
 											"kind": 65536,
 											"kindString": "Type literal",
 											"flags": {},
 											"signatures": [
 												{
-													"id": 19,
+													"id": 20,
 													"name": "__type",
 													"kind": 4096,
 													"kindString": "Call signature",
 													"flags": {},
 													"parameters": [
 														{
-															"id": 20,
+															"id": 21,
 															"name": "func",
 															"kind": 32768,
 															"kindString": "Parameter",
 															"flags": {},
 															"type": {
 																"type": "reference",
-																"name": "Function"
+																"id": 12,
+																"name": "TAnyFunction"
 															}
 														},
 														{
-															"id": 21,
+															"id": 22,
 															"name": "wait",
 															"kind": 32768,
 															"kindString": "Parameter",
@@ -282,7 +365,7 @@
 															"defaultValue": "1000"
 														},
 														{
-															"id": 22,
+															"id": 23,
 															"name": "options",
 															"kind": 32768,
 															"kindString": "Parameter",
@@ -291,65 +374,13 @@
 																"type": "reference",
 																"name": "IOptions"
 															},
-															"defaultValue": "..."
+															"defaultValue": "{}"
 														}
 													],
 													"type": {
 														"type": "reference",
-														"name": "Function"
-													}
-												}
-											]
-										}
-									}
-								},
-								{
-									"id": 23,
-									"name": "isObject",
-									"kind": 1024,
-									"kindString": "Property",
-									"flags": {},
-									"type": {
-										"type": "reflection",
-										"declaration": {
-											"id": 24,
-											"name": "__type",
-											"kind": 65536,
-											"kindString": "Type literal",
-											"flags": {},
-											"signatures": [
-												{
-													"id": 25,
-													"name": "__type",
-													"kind": 4096,
-													"kindString": "Call signature",
-													"flags": {},
-													"comment": {
-														"shortText": "函数去抖，也就是说当调用动作n毫秒后，才会执行该动作，若在这n毫秒内又调用此动作则将重新计算执行时间。",
-														"returns": "返回去抖之后的函数.",
-														"tags": [
-															{
-																"tag": "example",
-																"text": "\n\n// Avoid costly calculations while the window size is in flux.\njQuery(window).on('resize', _.debounce(calculateLayout, 150));\n\n// Invoke `sendMail` when clicked, debouncing subsequent calls.\njQuery(element).on('click', _.debounce(sendMail, 300, {\n  'leading': true,\n  'trailing': false\n}));\n\n// Ensure `batchLog` is invoked once after 1 second of debounced calls.\nvar debounced = _.debounce(batchLog, 250, { 'maxWait': 1000 });\nvar source = new EventSource('/stream');\njQuery(source).on('message', debounced);\n\n// Cancel the trailing debounced invocation.\njQuery(window).on('popstate', debounced.cancel);\n"
-															}
-														]
-													},
-													"parameters": [
-														{
-															"id": 26,
-															"name": "obj",
-															"kind": 32768,
-															"kindString": "Parameter",
-															"flags": {},
-															"type": {
-																"type": "intrinsic",
-																"name": "any"
-															}
-														}
-													],
-													"type": {
-														"type": "intrinsic",
-														"name": "boolean"
+														"id": 12,
+														"name": "TAnyFunction"
 													}
 												}
 											]
@@ -362,8 +393,7 @@
 									"title": "Properties",
 									"kind": 1024,
 									"children": [
-										17,
-										23
+										18
 									]
 								}
 							]
@@ -371,7 +401,7 @@
 					}
 				},
 				{
-					"id": 10,
+					"id": 7,
 					"name": "debounce",
 					"kind": 64,
 					"kindString": "Function",
@@ -385,25 +415,26 @@
 					],
 					"signatures": [
 						{
-							"id": 11,
+							"id": 8,
 							"name": "debounce",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 12,
+									"id": 9,
 									"name": "func",
 									"kind": 32768,
 									"kindString": "Parameter",
 									"flags": {},
 									"type": {
 										"type": "reference",
-										"name": "Function"
+										"id": 12,
+										"name": "TAnyFunction"
 									}
 								},
 								{
-									"id": 13,
+									"id": 10,
 									"name": "wait",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -415,7 +446,7 @@
 									"defaultValue": "1000"
 								},
 								{
-									"id": 14,
+									"id": 11,
 									"name": "options",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -424,62 +455,13 @@
 										"type": "reference",
 										"name": "IOptions"
 									},
-									"defaultValue": "..."
+									"defaultValue": "{}"
 								}
 							],
 							"type": {
 								"type": "reference",
-								"name": "Function"
-							}
-						}
-					]
-				},
-				{
-					"id": 7,
-					"name": "isObject",
-					"kind": 64,
-					"kindString": "Function",
-					"flags": {},
-					"sources": [
-						{
-							"fileName": "debounce.ts",
-							"line": 42,
-							"character": 16
-						}
-					],
-					"signatures": [
-						{
-							"id": 8,
-							"name": "isObject",
-							"kind": 4096,
-							"kindString": "Call signature",
-							"flags": {},
-							"comment": {
-								"shortText": "函数去抖，也就是说当调用动作n毫秒后，才会执行该动作，若在这n毫秒内又调用此动作则将重新计算执行时间。",
-								"returns": "返回去抖之后的函数.",
-								"tags": [
-									{
-										"tag": "example",
-										"text": "\n\n// Avoid costly calculations while the window size is in flux.\njQuery(window).on('resize', _.debounce(calculateLayout, 150));\n\n// Invoke `sendMail` when clicked, debouncing subsequent calls.\njQuery(element).on('click', _.debounce(sendMail, 300, {\n  'leading': true,\n  'trailing': false\n}));\n\n// Ensure `batchLog` is invoked once after 1 second of debounced calls.\nvar debounced = _.debounce(batchLog, 250, { 'maxWait': 1000 });\nvar source = new EventSource('/stream');\njQuery(source).on('message', debounced);\n\n// Cancel the trailing debounced invocation.\njQuery(window).on('popstate', debounced.cancel);\n"
-									}
-								]
-							},
-							"parameters": [
-								{
-									"id": 9,
-									"name": "obj",
-									"kind": 32768,
-									"kindString": "Parameter",
-									"flags": {},
-									"type": {
-										"type": "intrinsic",
-										"name": "any"
-									}
-								}
-							],
-							"type": {
-								"type": "intrinsic",
-								"name": "boolean"
+								"id": 12,
+								"name": "TAnyFunction"
 							}
 						}
 					]
@@ -487,17 +469,23 @@
 			],
 			"groups": [
 				{
+					"title": "Type aliases",
+					"kind": 4194304,
+					"children": [
+						12
+					]
+				},
+				{
 					"title": "Properties",
 					"kind": 1024,
 					"children": [
-						15
+						16
 					]
 				},
 				{
 					"title": "Functions",
 					"kind": 64,
 					"children": [
-						10,
 						7
 					]
 				}
@@ -511,106 +499,14 @@
 			]
 		},
 		{
-			"id": 27,
+			"id": 24,
 			"name": "formatnumber",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 31,
-					"name": "default",
-					"kind": 16777216,
-					"kindString": "Reference",
-					"flags": {},
-					"target": 28
-				},
-				{
 					"id": 28,
-					"name": "formatNumber",
-					"kind": 64,
-					"kindString": "Function",
-					"flags": {},
-					"sources": [
-						{
-							"fileName": "formatnumber.ts",
-							"line": 13,
-							"character": 16
-						}
-					],
-					"signatures": [
-						{
-							"id": 29,
-							"name": "formatNumber",
-							"kind": 4096,
-							"kindString": "Call signature",
-							"flags": {},
-							"comment": {
-								"returns": "//返回",
-								"tags": [
-									{
-										"tag": "date:",
-										"text": "2022-04-02 16:46:28\n"
-									}
-								]
-							},
-							"parameters": [
-								{
-									"id": 30,
-									"name": "num",
-									"kind": 32768,
-									"kindString": "Parameter",
-									"flags": {},
-									"comment": {
-										"text": "//"
-									},
-									"type": {
-										"type": "intrinsic",
-										"name": "number"
-									}
-								}
-							],
-							"type": {
-								"type": "intrinsic",
-								"name": "string"
-							}
-						}
-					]
-				}
-			],
-			"groups": [
-				{
-					"title": "References",
-					"kind": 16777216,
-					"children": [
-						31
-					]
-				},
-				{
-					"title": "Functions",
-					"kind": 64,
-					"children": [
-						28
-					]
-				}
-			],
-			"sources": [
-				{
-					"fileName": "formatnumber.ts",
-					"line": 13,
-					"character": 0
-				}
-			]
-		},
-		{
-			"id": 32,
-			"name": "index",
-			"kind": 1,
-			"kindString": "Module",
-			"flags": {},
-			"children": [
-				{
-					"id": 33,
 					"name": "default",
 					"kind": 1024,
 					"kindString": "Property",
@@ -618,336 +514,58 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 34,
+							"id": 29,
 							"name": "__type",
 							"kind": 65536,
 							"kindString": "Type literal",
 							"flags": {},
 							"children": [
 								{
-									"id": 45,
-									"name": "UrlGetRequest",
+									"id": 30,
+									"name": "formatNumber",
 									"kind": 1024,
 									"kindString": "Property",
 									"flags": {},
 									"type": {
 										"type": "reflection",
 										"declaration": {
-											"id": 46,
+											"id": 31,
 											"name": "__type",
 											"kind": 65536,
 											"kindString": "Type literal",
 											"flags": {},
 											"signatures": [
 												{
-													"id": 47,
+													"id": 32,
 													"name": "__type",
 													"kind": 4096,
 													"kindString": "Call signature",
 													"flags": {},
 													"comment": {
-														"returns": "//param参数，variable对应的值",
+														"returns": "number:转换后的值，value：倍数",
 														"tags": [
 															{
-																"tag": "date:",
-																"text": "2022-04-02 15:03:38"
+																"tag": "name:",
+																"text": ""
 															},
 															{
-																"tag": "description:url分离出参数",
-																"text": "\n"
+																"tag": "msg:",
+																"text": ""
+															},
+															{
+																"tag": "descripttion:",
+																"text": "转换number为指定数值\n"
 															}
 														]
 													},
 													"parameters": [
 														{
-															"id": 48,
-															"name": "url",
-															"kind": 32768,
-															"kindString": "Parameter",
-															"flags": {},
-															"comment": {
-																"text": "//完整的url"
-															},
-															"type": {
-																"type": "intrinsic",
-																"name": "string"
-															}
-														},
-														{
-															"id": 49,
-															"name": "variable",
-															"kind": 32768,
-															"kindString": "Parameter",
-															"flags": {},
-															"comment": {
-																"text": "//param参数，键"
-															},
-															"type": {
-																"type": "intrinsic",
-																"name": "string"
-															}
-														}
-													],
-													"type": {
-														"type": "union",
-														"types": [
-															{
-																"type": "intrinsic",
-																"name": "string"
-															},
-															{
-																"type": "literal",
-																"value": false
-															}
-														]
-													}
-												}
-											]
-										}
-									}
-								},
-								{
-									"id": 35,
-									"name": "changefilesize",
-									"kind": 1024,
-									"kindString": "Property",
-									"flags": {},
-									"type": {
-										"type": "reflection",
-										"declaration": {
-											"id": 36,
-											"name": "__type",
-											"kind": 65536,
-											"kindString": "Type literal",
-											"flags": {},
-											"signatures": [
-												{
-													"id": 37,
-													"name": "__type",
-													"kind": 4096,
-													"kindString": "Call signature",
-													"flags": {},
-													"comment": {
-														"returns": "size",
-														"tags": [
-															{
-																"tag": "date:",
-																"text": "2022-04-02 15:23:27\n"
-															}
-														]
-													},
-													"parameters": [
-														{
-															"id": 38,
-															"name": "limit",
-															"kind": 32768,
-															"kindString": "Parameter",
-															"flags": {},
-															"comment": {},
-															"type": {
-																"type": "intrinsic",
-																"name": "number"
-															}
-														}
-													],
-													"type": {
-														"type": "intrinsic",
-														"name": "string"
-													}
-												}
-											]
-										}
-									}
-								},
-								{
-									"id": 50,
-									"name": "debounce",
-									"kind": 1024,
-									"kindString": "Property",
-									"flags": {},
-									"type": {
-										"type": "reflection",
-										"declaration": {
-											"id": 51,
-											"name": "__type",
-											"kind": 65536,
-											"kindString": "Type literal",
-											"flags": {},
-											"children": [
-												{
-													"id": 52,
-													"name": "debounce",
-													"kind": 1024,
-													"kindString": "Property",
-													"flags": {},
-													"type": {
-														"type": "reflection",
-														"declaration": {
-															"id": 53,
-															"name": "__type",
-															"kind": 65536,
-															"kindString": "Type literal",
-															"flags": {},
-															"signatures": [
-																{
-																	"id": 54,
-																	"name": "__type",
-																	"kind": 4096,
-																	"kindString": "Call signature",
-																	"flags": {},
-																	"parameters": [
-																		{
-																			"id": 55,
-																			"name": "func",
-																			"kind": 32768,
-																			"kindString": "Parameter",
-																			"flags": {},
-																			"type": {
-																				"type": "reference",
-																				"name": "Function"
-																			}
-																		},
-																		{
-																			"id": 56,
-																			"name": "wait",
-																			"kind": 32768,
-																			"kindString": "Parameter",
-																			"flags": {},
-																			"type": {
-																				"type": "intrinsic",
-																				"name": "number"
-																			},
-																			"defaultValue": "1000"
-																		},
-																		{
-																			"id": 57,
-																			"name": "options",
-																			"kind": 32768,
-																			"kindString": "Parameter",
-																			"flags": {},
-																			"type": {
-																				"type": "reference",
-																				"name": "IOptions"
-																			},
-																			"defaultValue": "..."
-																		}
-																	],
-																	"type": {
-																		"type": "reference",
-																		"name": "Function"
-																	}
-																}
-															]
-														}
-													}
-												},
-												{
-													"id": 58,
-													"name": "isObject",
-													"kind": 1024,
-													"kindString": "Property",
-													"flags": {},
-													"type": {
-														"type": "reflection",
-														"declaration": {
-															"id": 59,
-															"name": "__type",
-															"kind": 65536,
-															"kindString": "Type literal",
-															"flags": {},
-															"signatures": [
-																{
-																	"id": 60,
-																	"name": "__type",
-																	"kind": 4096,
-																	"kindString": "Call signature",
-																	"flags": {},
-																	"comment": {
-																		"shortText": "函数去抖，也就是说当调用动作n毫秒后，才会执行该动作，若在这n毫秒内又调用此动作则将重新计算执行时间。",
-																		"returns": "返回去抖之后的函数.",
-																		"tags": [
-																			{
-																				"tag": "example",
-																				"text": "\n\n// Avoid costly calculations while the window size is in flux.\njQuery(window).on('resize', _.debounce(calculateLayout, 150));\n\n// Invoke `sendMail` when clicked, debouncing subsequent calls.\njQuery(element).on('click', _.debounce(sendMail, 300, {\n  'leading': true,\n  'trailing': false\n}));\n\n// Ensure `batchLog` is invoked once after 1 second of debounced calls.\nvar debounced = _.debounce(batchLog, 250, { 'maxWait': 1000 });\nvar source = new EventSource('/stream');\njQuery(source).on('message', debounced);\n\n// Cancel the trailing debounced invocation.\njQuery(window).on('popstate', debounced.cancel);\n"
-																			}
-																		]
-																	},
-																	"parameters": [
-																		{
-																			"id": 61,
-																			"name": "obj",
-																			"kind": 32768,
-																			"kindString": "Parameter",
-																			"flags": {},
-																			"type": {
-																				"type": "intrinsic",
-																				"name": "any"
-																			}
-																		}
-																	],
-																	"type": {
-																		"type": "intrinsic",
-																		"name": "boolean"
-																	}
-																}
-															]
-														}
-													}
-												}
-											],
-											"groups": [
-												{
-													"title": "Properties",
-													"kind": 1024,
-													"children": [
-														52,
-														58
-													]
-												}
-											]
-										}
-									}
-								},
-								{
-									"id": 62,
-									"name": "formatnumber",
-									"kind": 1024,
-									"kindString": "Property",
-									"flags": {},
-									"type": {
-										"type": "reflection",
-										"declaration": {
-											"id": 63,
-											"name": "__type",
-											"kind": 65536,
-											"kindString": "Type literal",
-											"flags": {},
-											"signatures": [
-												{
-													"id": 64,
-													"name": "__type",
-													"kind": 4096,
-													"kindString": "Call signature",
-													"flags": {},
-													"comment": {
-														"returns": "//返回",
-														"tags": [
-															{
-																"tag": "date:",
-																"text": "2022-04-02 16:46:28\n"
-															}
-														]
-													},
-													"parameters": [
-														{
-															"id": 65,
+															"id": 33,
 															"name": "num",
 															"kind": 32768,
 															"kindString": "Parameter",
 															"flags": {},
-															"comment": {
-																"text": "//"
-															},
+															"comment": {},
 															"type": {
 																"type": "intrinsic",
 																"name": "number"
@@ -956,83 +574,7 @@
 													],
 													"type": {
 														"type": "intrinsic",
-														"name": "string"
-													}
-												}
-											]
-										}
-									}
-								},
-								{
-									"id": 39,
-									"name": "throttle",
-									"kind": 1024,
-									"kindString": "Property",
-									"flags": {},
-									"type": {
-										"type": "reflection",
-										"declaration": {
-											"id": 40,
-											"name": "__type",
-											"kind": 65536,
-											"kindString": "Type literal",
-											"flags": {},
-											"signatures": [
-												{
-													"id": 41,
-													"name": "__type",
-													"kind": 4096,
-													"kindString": "Call signature",
-													"flags": {},
-													"comment": {
-														"tags": [
-															{
-																"tag": "date:",
-																"text": "2022-04-02 10:57:20\n"
-															}
-														]
-													},
-													"parameters": [
-														{
-															"id": 42,
-															"name": "func",
-															"kind": 32768,
-															"kindString": "Parameter",
-															"flags": {},
-															"comment": {},
-															"type": {
-																"type": "reference",
-																"name": "Function"
-															}
-														},
-														{
-															"id": 43,
-															"name": "wait",
-															"kind": 32768,
-															"kindString": "Parameter",
-															"flags": {},
-															"comment": {},
-															"type": {
-																"type": "intrinsic",
-																"name": "number"
-															}
-														},
-														{
-															"id": 44,
-															"name": "options",
-															"kind": 32768,
-															"kindString": "Parameter",
-															"flags": {},
-															"comment": {},
-															"type": {
-																"type": "reference",
-																"name": "IOptions"
-															}
-														}
-													],
-													"type": {
-														"type": "reference",
-														"name": "Function"
+														"name": "object"
 													}
 												}
 											]
@@ -1045,16 +587,70 @@
 									"title": "Properties",
 									"kind": 1024,
 									"children": [
-										45,
-										35,
-										50,
-										62,
-										39
+										30
 									]
 								}
 							]
 						}
 					}
+				},
+				{
+					"id": 25,
+					"name": "formatNumber",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "formatnumber.ts",
+							"line": 14,
+							"character": 16
+						}
+					],
+					"signatures": [
+						{
+							"id": 26,
+							"name": "formatNumber",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"returns": "number:转换后的值，value：倍数",
+								"tags": [
+									{
+										"tag": "name:",
+										"text": ""
+									},
+									{
+										"tag": "msg:",
+										"text": ""
+									},
+									{
+										"tag": "descripttion:",
+										"text": "转换number为指定数值\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 27,
+									"name": "num",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "object"
+							}
+						}
+					]
 				}
 			],
 			"groups": [
@@ -1062,35 +658,228 @@
 					"title": "Properties",
 					"kind": 1024,
 					"children": [
-						33
+						28
+					]
+				},
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						25
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "formatnumber.ts",
+					"line": 14,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 34,
+			"name": "index",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 60,
+					"name": "TAnyFunction",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {},
+					"target": 12
+				},
+				{
+					"id": 58,
+					"name": "UrlGetRequest",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {},
+					"target": 52
+				},
+				{
+					"id": 61,
+					"name": "changefilesize",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {},
+					"target": 2
+				},
+				{
+					"id": 59,
+					"name": "debounce",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {},
+					"target": 7
+				},
+				{
+					"id": 62,
+					"name": "formatNumber",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {},
+					"target": 25
+				},
+				{
+					"id": 63,
+					"name": "isObject",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {},
+					"target": 36
+				},
+				{
+					"id": 57,
+					"name": "throttle",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {},
+					"target": 45
+				}
+			],
+			"groups": [
+				{
+					"title": "References",
+					"kind": 16777216,
+					"children": [
+						60,
+						58,
+						61,
+						59,
+						62,
+						63,
+						57
 					]
 				}
 			],
 			"sources": [
 				{
 					"fileName": "index.ts",
-					"line": 7,
+					"line": 15,
 					"character": 0
 				}
 			]
 		},
 		{
-			"id": 66,
+			"id": 35,
+			"name": "isObject",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 39,
+					"name": "default",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {},
+					"target": 36
+				},
+				{
+					"id": 36,
+					"name": "isObject",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "isObject.ts",
+							"line": 15,
+							"character": 16
+						}
+					],
+					"signatures": [
+						{
+							"id": 37,
+							"name": "isObject",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"tags": [
+									{
+										"tag": "name:",
+										"text": ""
+									},
+									{
+										"tag": "msg:",
+										"text": ""
+									},
+									{
+										"tag": "descripttion:",
+										"text": "判断是否为对象\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 38,
+									"name": "obj",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"text": "对象"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "object"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "References",
+					"kind": 16777216,
+					"children": [
+						39
+					]
+				},
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						36
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "isObject.ts",
+					"line": 15,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 40,
 			"name": "main",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 69,
+					"id": 43,
 					"name": "default",
 					"kind": 16777216,
 					"kindString": "Reference",
 					"flags": {},
-					"target": 67
+					"target": 41
 				},
 				{
-					"id": 67,
+					"id": 41,
 					"name": "main",
 					"kind": 64,
 					"kindString": "Function",
@@ -1104,7 +893,7 @@
 					],
 					"signatures": [
 						{
-							"id": 68,
+							"id": 42,
 							"name": "main",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -1122,14 +911,14 @@
 					"title": "References",
 					"kind": 16777216,
 					"children": [
-						69
+						43
 					]
 				},
 				{
 					"title": "Functions",
 					"kind": 64,
 					"children": [
-						67
+						41
 					]
 				}
 			],
@@ -1142,22 +931,22 @@
 			]
 		},
 		{
-			"id": 70,
+			"id": 44,
 			"name": "throttle",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 76,
+					"id": 50,
 					"name": "default",
 					"kind": 16777216,
 					"kindString": "Reference",
 					"flags": {},
-					"target": 40
+					"target": 45
 				},
 				{
-					"id": 71,
+					"id": 45,
 					"name": "throttle",
 					"kind": 64,
 					"kindString": "Function",
@@ -1165,13 +954,13 @@
 					"sources": [
 						{
 							"fileName": "throttle.ts",
-							"line": 24,
+							"line": 18,
 							"character": 16
 						}
 					],
 					"signatures": [
 						{
-							"id": 72,
+							"id": 46,
 							"name": "throttle",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -1186,7 +975,7 @@
 							},
 							"parameters": [
 								{
-									"id": 73,
+									"id": 47,
 									"name": "func",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1198,7 +987,7 @@
 									}
 								},
 								{
-									"id": 74,
+									"id": 48,
 									"name": "wait",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1210,7 +999,7 @@
 									}
 								},
 								{
-									"id": 75,
+									"id": 49,
 									"name": "options",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1219,7 +1008,8 @@
 									"type": {
 										"type": "reference",
 										"name": "IOptions"
-									}
+									},
+									"defaultValue": "{}"
 								}
 							],
 							"type": {
@@ -1235,14 +1025,14 @@
 					"title": "References",
 					"kind": 16777216,
 					"children": [
-						76
+						50
 					]
 				},
 				{
 					"title": "Functions",
 					"kind": 64,
 					"children": [
-						71
+						45
 					]
 				}
 			],
@@ -1260,13 +1050,14 @@
 			"title": "Modules",
 			"kind": 1,
 			"children": [
-				77,
+				51,
 				1,
 				6,
-				27,
-				32,
-				66,
-				70
+				24,
+				34,
+				35,
+				40,
+				44
 			]
 		}
 	]

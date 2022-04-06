@@ -32,17 +32,17 @@
     "start": "vite",
     "dev": "gulp dev",
     "doc": "gulp doc",
-    "lint": "eslint --ext .js,.ts  ./src",
-    "lint:fix": "eslint --fix --ext .js,.ts  ./src",
+    "lint": "eslint --fix --ext  .js,.ts  ./src",
     "api": "api-extractor run",
-    "versionpatch": "gulp changelog && git add CHANGELOG.md && npm version patch",
+    "updateversion": "gulp taskUpdateVersion",
     "test": "jest --coverage --verbose -u",
-    "publish": "npm test &&npm lint:fix&&npm version && npm build &&npm run api&& npm publish",
-    "release": "npm test &&npm run lint:fix&& npm run build && npm run publish",
+    "publish": "npm test &&npm lint&&npm version && npm build &&npm run api&& npm publish",
+    "release": "npm test&& gulp publish",
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.6",
+    "@babel/core": "^7.17.8",
+    "@babel/plugin-transform-runtime": "^7.17.0",
     "@babel/preset-env": "^7.14.7",
     "@microsoft/api-extractor": "^7.20.0",
     "@microsoft/tsdoc": "^0.13.2",
@@ -84,8 +84,7 @@
     "rollup-plugin-uglify": "^6.0.4",
     "ts-jest": "^27.1.4",
     "tslib": "^2.3.0",
-    "typedoc": "^0.21.5",
-    "typedoc-plugin-markdown": "^3.11.14"
+    "typedoc": "^0.21.5"
   },
   "publishConfig": {
     "access": "public",
