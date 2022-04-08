@@ -1,7 +1,7 @@
 /*
  * @Author: t_winkjqzhang
  * @Date: 2022-03-31 14:34:38
- * @LastEditTime: 2022-04-02 14:38:35
+ * @LastEditTime: 2022-04-09 01:42:03
  * @Description: Do not edit
  */
 import resolve from "@rollup/plugin-node-resolve";
@@ -71,8 +71,15 @@ let g_d_tasks_list = [].concat(
     return {
       input: `${g_d_input_path}/${name}.ts`,
       output: [
+        // 输出 commonjs 规范的代码
         {
-          file: `${g_d_ouput_path}/${name}.js`,
+          file: ` ${g_d_ouput_path}/${name}.js`,
+          format: "cjs",
+          name: pkg.name,
+        },
+        // 输出 es 规范的代码
+        {
+          file: `${g_d_ouput_path}/${name}.esm.js`,
           format: "esm",
         },
       ],
@@ -81,7 +88,7 @@ let g_d_tasks_list = [].concat(
           .filter((n) => n !== name)
           .map((n) => path.resolve(`./src/${n}.ts`))
       ),
-      plugins: g_d_plugins_01.concat(
+      plugins: g_d_plugins_02.concat(
         replace({
           values: d_replace_obj,
           preventAssign: true,

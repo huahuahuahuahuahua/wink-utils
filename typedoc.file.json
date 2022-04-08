@@ -1,14 +1,14 @@
 {
 	"id": 0,
 	"name": "sings-utils",
-	"kind": 0,
+	"kind": 1,
 	"flags": {},
 	"originalName": "",
 	"children": [
 		{
 			"id": 51,
 			"name": "UrlGetRequest",
-			"kind": 1,
+			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
@@ -61,7 +61,7 @@
 									"kindString": "Parameter",
 									"flags": {},
 									"comment": {
-										"text": "//完整的url"
+										"shortText": "//完整的url"
 									},
 									"type": {
 										"type": "intrinsic",
@@ -75,7 +75,7 @@
 									"kindString": "Parameter",
 									"flags": {},
 									"comment": {
-										"text": "//param参数，键"
+										"shortText": "//param参数，键"
 									},
 									"type": {
 										"type": "intrinsic",
@@ -127,7 +127,7 @@
 		{
 			"id": 1,
 			"name": "changefilesize",
-			"kind": 1,
+			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
@@ -180,7 +180,7 @@
 									"kindString": "Parameter",
 									"flags": {},
 									"comment": {
-										"text": "二进制文件大小"
+										"shortText": "二进制文件大小"
 									},
 									"type": {
 										"type": "intrinsic",
@@ -223,7 +223,7 @@
 		{
 			"id": 6,
 			"name": "debounce",
-			"kind": 1,
+			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
@@ -248,16 +248,6 @@
 							"kind": 65536,
 							"kindString": "Type literal",
 							"flags": {},
-							"comment": {
-								"shortText": "函数去抖，也就是说当调用动作n毫秒后，才会执行该动作，若在这n毫秒内又调用此动作则将重新计算执行时间。",
-								"returns": "返回去抖之后的函数.",
-								"tags": [
-									{
-										"tag": "example",
-										"text": "\n\n// Avoid costly calculations while the window size is in flux.\njQuery(window).on('resize', _.debounce(calculateLayout, 150));\n\n// Invoke `sendMail` when clicked, debouncing subsequent calls.\njQuery(element).on('click', _.debounce(sendMail, 300, {\n  'leading': true,\n  'trailing': false\n}));\n\n// Ensure `batchLog` is invoked once after 1 second of debounced calls.\nvar debounced = _.debounce(batchLog, 250, { 'maxWait': 1000 });\nvar source = new EventSource('/stream');\njQuery(source).on('message', debounced);\n\n// Cancel the trailing debounced invocation.\njQuery(window).on('popstate', debounced.cancel);\n"
-									}
-								]
-							},
 							"sources": [
 								{
 									"fileName": "debounce.ts",
@@ -274,7 +264,13 @@
 									"flags": {},
 									"comment": {
 										"shortText": "函数去抖，也就是说当调用动作n毫秒后，才会执行该动作，若在这n毫秒内又调用此动作则将重新计算执行时间。",
-										"returns": "返回去抖之后的函数."
+										"returns": "返回去抖之后的函数.",
+										"tags": [
+											{
+												"tag": "example",
+												"text": "\n\n// Avoid costly calculations while the window size is in flux.\njQuery(window).on('resize', _.debounce(calculateLayout, 150));\n\n// Invoke `sendMail` when clicked, debouncing subsequent calls.\njQuery(element).on('click', _.debounce(sendMail, 300, {\n  'leading': true,\n  'trailing': false\n}));\n\n// Ensure `batchLog` is invoked once after 1 second of debounced calls.\nvar debounced = _.debounce(batchLog, 250, { 'maxWait': 1000 });\nvar source = new EventSource('/stream');\njQuery(source).on('message', debounced);\n\n// Cancel the trailing debounced invocation.\njQuery(window).on('popstate', debounced.cancel);\n"
+											}
+										]
 									},
 									"parameters": [
 										{
@@ -306,9 +302,16 @@
 				{
 					"id": 16,
 					"name": "default",
-					"kind": 1024,
-					"kindString": "Property",
+					"kind": 32,
+					"kindString": "Variable",
 					"flags": {},
+					"sources": [
+						{
+							"fileName": "debounce.ts",
+							"line": 179,
+							"character": 0
+						}
+					],
 					"type": {
 						"type": "reflection",
 						"declaration": {
@@ -476,8 +479,8 @@
 					]
 				},
 				{
-					"title": "Properties",
-					"kind": 1024,
+					"title": "Variables",
+					"kind": 32,
 					"children": [
 						16
 					]
@@ -501,16 +504,23 @@
 		{
 			"id": 24,
 			"name": "formatnumber",
-			"kind": 1,
+			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
 					"id": 28,
 					"name": "default",
-					"kind": 1024,
-					"kindString": "Property",
+					"kind": 32,
+					"kindString": "Variable",
 					"flags": {},
+					"sources": [
+						{
+							"fileName": "formatnumber.ts",
+							"line": 73,
+							"character": 0
+						}
+					],
 					"type": {
 						"type": "reflection",
 						"declaration": {
@@ -655,8 +665,8 @@
 			],
 			"groups": [
 				{
-					"title": "Properties",
-					"kind": 1024,
+					"title": "Variables",
+					"kind": 32,
 					"children": [
 						28
 					]
@@ -680,7 +690,7 @@
 		{
 			"id": 34,
 			"name": "index",
-			"kind": 1,
+			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
@@ -767,7 +777,7 @@
 		{
 			"id": 35,
 			"name": "isObject",
-			"kind": 1,
+			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
@@ -823,7 +833,7 @@
 									"kindString": "Parameter",
 									"flags": {},
 									"comment": {
-										"text": "对象"
+										"shortText": "对象"
 									},
 									"type": {
 										"type": "intrinsic",
@@ -866,7 +876,7 @@
 		{
 			"id": 40,
 			"name": "main",
-			"kind": 1,
+			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
@@ -933,7 +943,7 @@
 		{
 			"id": 44,
 			"name": "throttle",
-			"kind": 1,
+			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
@@ -983,6 +993,8 @@
 									"comment": {},
 									"type": {
 										"type": "reference",
+										"qualifiedName": "Function",
+										"package": "typescript",
 										"name": "Function"
 									}
 								},
@@ -1014,6 +1026,8 @@
 							],
 							"type": {
 								"type": "reference",
+								"qualifiedName": "Function",
+								"package": "typescript",
 								"name": "Function"
 							}
 						}
@@ -1048,7 +1062,7 @@
 	"groups": [
 		{
 			"title": "Modules",
-			"kind": 1,
+			"kind": 2,
 			"children": [
 				51,
 				1,

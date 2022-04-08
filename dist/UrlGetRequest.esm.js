@@ -1,0 +1,1 @@
+function UrlGetRequest(e,t){for(var e=e.split("?")[1],r=(e=e.indexOf("&openid=")<0&&0<e.indexOf("openid=")?e.replace(/openid=/,function(e){return"&"+e}):e).split("&"),n=0;n<r.length;n++){var i=r[n].split("=");if(i[0]===t)return i[1]}return!1}export{UrlGetRequest,UrlGetRequest as default};

@@ -6,6 +6,7 @@ const clean = require("gulp-clean");
 const typedoc = require("gulp-typedoc");
 const pkg = require("./package.json");
 const conventionalChangelog = require("conventional-changelog");
+const { resolve } = require("path");
 /** 需要编译的文件名（不带后缀名） */
 let inputFileNameNoExtList = pkg._need_handle_files;
 let version = pkg._version;
@@ -31,19 +32,35 @@ let firstCharUpperCase = (str) => {
     .map((s) => s.slice(0, 1).toUpperCase() + s.slice(1))
     .join("");
 };
-
+let addEsmMiddle = (str) => {
+  return str.split(".").join(".esm.");
+};
 /** 清除 types 文件 */
 const taskCleanTypes = () =>
   gulp.src("types", { allowEmpty: true }).pipe(clean());
 
 /** 使用 tsc 输出 .d.ts */
-const taskOutputTypes = () =>
-  exec(
-    `${path.resolve("./node_modules/.bin/tsc")} ${inputFileNameNoExtList
-      .filter((name) => !/\./.test(name))
-      .map((name) => `./src/${name}.ts`)
-      .join(" ")} --declaration --declarationDir ./dist --outDir ./dist`
-  );
+const taskOutputTypes = () => {
+  const cmdStr = `${path.resolve(
+    "./node_modules/.bin/tsc"
+  )} ${inputFileNameNoExtList
+    .filter((name) => !/\./.test(name))
+    .map((name) => `./src/${name}.ts`)
+    .join(" ")} --declaration --declarationDir ./types --outDir ./types`;
+  return new Promise((resolve, reject) => {
+    exec(cmdStr, (err, stdout, stderr) => {
+      if (err) {
+        console.log(err);
+        console.warn(new Date(), " 打包ts命令执行失败");
+        reject(err);
+      } else {
+        console.log(stdout);
+        console.warn(new Date(), " 打包ts命令执行成功");
+        resolve();
+      }
+    });
+  });
+};
 
 /** 清除 types 文件 */
 const taskCleanTypesDirUnuseFile = () =>
@@ -54,19 +71,26 @@ const taskBuildTsProject = () =>
   exec(`${path.resolve("./node_modules/.bin/rollup")} -c`);
 
 /** 使用 parcel 构建 umd 项目 */
-const taskBuildUmd = () =>
+const taskBuildUmdEsm = () =>
   Promise.all(
-    inputFileNameNoExtList.map((name) =>
+    inputFileNameNoExtList.map((name) => {
+      //输出common.js模块
       exec(
         `${path.resolve(
           "./node_modules/.bin/parcel"
         )} build ./src/${name}.ts -d ./dist/umd --global singsutils${firstCharUpperCase(
           name
         )}`
-      )
-    )
+      );
+      exec(
+        `${path.resolve(
+          "./node_modules/.bin/parcel"
+        )} build ./src/${name}.ts -d ./dist/esm --global singsutils${firstCharUpperCase(
+          addEsmMiddle(name)
+        )}`
+      );
+    })
   );
-
 /** 输出 README.md */
 const taskOutputReadme = () => {
   return new Promise((resolve) => {
@@ -262,11 +286,11 @@ const taskOutputTypedoc = () => {
       // NOTE: the out option and the json option cannot share the same directory
       out: "./docs/",
       json: "./typedoc.file.json",
-      exclude: ["node_modules", "**/*+(index|.worker|.e2e).ts"],
+      // exclude: ["node_modules", "**/*+(index|.worker|.e2e).ts"],
       // TypeScript options (see typescript docs)
       // Output options (see typedoc docs)
       // TypeDoc options (see typedoc docs)
-      version: true,
+      // version: true,
 
       // // TypeDoc options (see TypeDoc docs http://typedoc.org/api/interfaces/typedocoptionmap.html)
       // name: 'my-project',
@@ -325,11 +349,12 @@ const taskPublish = () => {
     resolve();
   });
 };
+
 /** type doc 任务 */
 const taskTypedoc = gulp.series(taskCleanTypedoc, taskOutputTypedoc); //taskOutputTypedoc
 
 /** 调试 */
-const taskDev = () => gulp.watch(["./src/*.ts"], taskBuildUmd);
+const taskDev = () => gulp.watch(["./src/*.ts"], taskBuildUmdEsm);
 
 exports.doc = gulp.series(taskTypedoc, taskOutputReadme);
 exports.buildTypes = gulp.series(
@@ -341,12 +366,13 @@ exports.buildTypes = gulp.series(
 exports.build = gulp.parallel(
   taskeslint,
   taskBuildTsProject,
-  // taskchangelog,
+  taskchangelog,
   exports.buildTypes,
-  taskBuildUmd
+  taskBuildUmdEsm
 );
+exports.taskBuildTsProject = taskBuildTsProject;
 exports.publish = gulp.series(taskUpdateVersion, taskPublish);
 exports.taskUpdateVersion = taskUpdateVersion;
-// exports.changelog = taskchangelog;
+exports.changelog = taskchangelog;
 exports.dev = taskDev;
 exports.default = (cb) => cb();
