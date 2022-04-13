@@ -43,4 +43,4 @@ Renames and re-exports [UrlGetRequest](UrlGetRequest.md#urlgetrequest)
 
 #### Defined in
 
-[UrlGetRequest.ts:16](https://github.com/huahuahuahuahuahua/wink-utils/blob/671099e/src/UrlGetRequest.ts#L16)
+[UrlGetRequest.ts:16](https://github.com/huahuahuahuahuahua/wink-utils/blob/a2b0a79/src/UrlGetRequest.ts#L16)

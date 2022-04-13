@@ -36,7 +36,7 @@
 
 #### Defined in
 
-[cacheAsync.ts:1](https://github.com/huahuahuahuahuahua/wink-utils/blob/671099e/src/cacheAsync.ts#L1)
+[cacheAsync.ts:1](https://github.com/huahuahuahuahuahua/wink-utils/blob/a2b0a79/src/cacheAsync.ts#L1)
 
 ## Functions
 
@@ -68,7 +68,7 @@
 
 #### Defined in
 
-[cacheAsync.ts:3](https://github.com/huahuahuahuahuahua/wink-utils/blob/671099e/src/cacheAsync.ts#L3)
+[cacheAsync.ts:3](https://github.com/huahuahuahuahuahua/wink-utils/blob/a2b0a79/src/cacheAsync.ts#L3)
 
 ___
 
@@ -105,7 +105,7 @@ ___
 
 #### Defined in
 
-[cacheAsync.ts:26](https://github.com/huahuahuahuahuahua/wink-utils/blob/671099e/src/cacheAsync.ts#L26)
+[cacheAsync.ts:26](https://github.com/huahuahuahuahuahua/wink-utils/blob/a2b0a79/src/cacheAsync.ts#L26)
 
 ___
 
@@ -125,4 +125,4 @@ ___
 
 #### Defined in
 
-[cacheAsync.ts:66](https://github.com/huahuahuahuahuahua/wink-utils/blob/671099e/src/cacheAsync.ts#L66)
+[cacheAsync.ts:66](https://github.com/huahuahuahuahuahua/wink-utils/blob/a2b0a79/src/cacheAsync.ts#L66)

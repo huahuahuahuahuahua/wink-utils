@@ -22,12 +22,11 @@
   ],
   "files": [
     "dist",
-    "test",
     "docs",
+    "types",
     "LICENSE",
     "CHANGELOG.md",
-    "README.md",
-    "types"
+    "README.md"
   ],
   "scripts": {
     "build": "gulp build",

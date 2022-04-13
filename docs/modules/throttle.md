@@ -22,7 +22,7 @@ Renames and re-exports [throttle](throttle.md#throttle)
 
 ### throttle
 
-▸ **throttle**(`func`, `wait`, `options?`): `Function`
+▸ **throttle**(`func`, `wait`, `options?`): [`TAnyFunction`](debounce.md#tanyfunction)
 
 **`date:`** 2022-04-02 10:57:20
 
@@ -30,14 +30,14 @@ Renames and re-exports [throttle](throttle.md#throttle)
 
 | Name | Type |
 | :------ | :------ |
-| `func` | `Function` |
+| `func` | [`TAnyFunction`](debounce.md#tanyfunction) |
 | `wait` | `number` |
 | `options` | `IOptions` |
 
 #### Returns
 
-`Function`
+[`TAnyFunction`](debounce.md#tanyfunction)
 
 #### Defined in
 
-[throttle.ts:18](https://github.com/huahuahuahuahuahua/wink-utils/blob/671099e/src/throttle.ts#L18)
+[throttle.ts:13](https://github.com/huahuahuahuahuahua/wink-utils/blob/a2b0a79/src/throttle.ts#L13)

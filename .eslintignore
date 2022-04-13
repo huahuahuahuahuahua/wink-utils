@@ -8,3 +8,4 @@ tsconfig.eslint.json
 tsconfig.json
 src/throttle.ts
 src/debounce.ts
+src/cacheAsync.ts

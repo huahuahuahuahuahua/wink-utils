@@ -1314,7 +1314,7 @@
 					"sources": [
 						{
 							"fileName": "throttle.ts",
-							"line": 18,
+							"line": 13,
 							"character": 16
 						}
 					],
@@ -1343,9 +1343,8 @@
 									"comment": {},
 									"type": {
 										"type": "reference",
-										"qualifiedName": "Function",
-										"package": "typescript",
-										"name": "Function"
+										"id": 33,
+										"name": "TAnyFunction"
 									}
 								},
 								{
@@ -1376,9 +1375,8 @@
 							],
 							"type": {
 								"type": "reference",
-								"qualifiedName": "Function",
-								"package": "typescript",
-								"name": "Function"
+								"id": 33,
+								"name": "TAnyFunction"
 							}
 						}
 					]
@@ -1403,7 +1401,7 @@
 			"sources": [
 				{
 					"fileName": "throttle.ts",
-					"line": 7,
+					"line": 1,
 					"character": 0
 				}
 			]

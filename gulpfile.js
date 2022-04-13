@@ -364,16 +364,17 @@ exports.buildTypes = gulp.series(
   exports.doc
 );
 exports.build = gulp.parallel(
-  // taskeslint,
+  taskeslint,
   taskBuildTsProject,
-  // taskchangelog,
+  taskchangelog,
   exports.buildTypes,
   taskBuildUmdEsm
 );
 exports.taskBuildUmdEsm = taskBuildUmdEsm;
+exports.taskOutputTypes = taskOutputTypes;
 exports.taskBuildTsProject = taskBuildTsProject;
 exports.publish = gulp.series(taskUpdateVersion, taskPublish);
 exports.taskUpdateVersion = taskUpdateVersion;
-// exports.changelog = taskchangelog;
+exports.changelog = taskchangelog;
 exports.dev = taskDev;
 exports.default = (cb) => cb();

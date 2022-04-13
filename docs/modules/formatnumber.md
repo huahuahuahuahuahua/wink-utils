@@ -26,7 +26,7 @@
 
 #### Defined in
 
-[formatnumber.ts:73](https://github.com/huahuahuahuahuahua/wink-utils/blob/671099e/src/formatnumber.ts#L73)
+[formatnumber.ts:73](https://github.com/huahuahuahuahuahua/wink-utils/blob/a2b0a79/src/formatnumber.ts#L73)
 
 ## Functions
 
@@ -54,4 +54,4 @@ number:转换后的值，value：倍数
 
 #### Defined in
 
-[formatnumber.ts:14](https://github.com/huahuahuahuahuahua/wink-utils/blob/671099e/src/formatnumber.ts#L14)
+[formatnumber.ts:14](https://github.com/huahuahuahuahuahua/wink-utils/blob/a2b0a79/src/formatnumber.ts#L14)

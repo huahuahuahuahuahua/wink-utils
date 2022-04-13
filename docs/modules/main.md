@@ -30,4 +30,4 @@ Renames and re-exports [main](main.md#main)
 
 #### Defined in
 
-[main.ts:11](https://github.com/huahuahuahuahuahua/wink-utils/blob/671099e/src/main.ts#L11)
+[main.ts:11](https://github.com/huahuahuahuahuahua/wink-utils/blob/a2b0a79/src/main.ts#L11)

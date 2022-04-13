@@ -1,25 +1,20 @@
-/*
- * @Author: t_winkjqzhang
- * @Date: 2022-03-31 15:54:52
- * @LastEditTime: 2022-04-06 00:39:25
- * @Description: Do not edit
- */
+import { TAnyFunction } from "./debounce";
 interface IOptions {
   leading?: boolean;
   trailing?: boolean;
 }
 /**
- * @param {Function} func
+ * @param {TAnyFunction} func
  * @param {number} wait
  * @param {IOptions} options
- * @return {*}
+ * @return {TAnyFunction}
  * @Date: 2022-04-02 10:57:20
  */
 export function throttle(
-  func: Function,
+  func: TAnyFunction,
   wait: number,
-  options: IOptions={}
-): Function {
+  options: IOptions = {}
+): TAnyFunction {
   let timeout: any | null = null,
     context: object | any = null,
     args: any = null; // result
