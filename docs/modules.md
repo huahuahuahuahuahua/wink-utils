@@ -9,6 +9,7 @@
 - [UrlGetRequest](modules/UrlGetRequest.md)
 - [cacheAsync](modules/cacheAsync.md)
 - [changefilesize](modules/changefilesize.md)
+- [cloneDeep](modules/cloneDeep.md)
 - [debounce](modules/debounce.md)
 - [formatnumber](modules/formatnumber.md)
 - [index](modules/index.md)

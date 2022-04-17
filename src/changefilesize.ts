@@ -1,9 +1,3 @@
-/*
- * @Author: t_winkjqzhang
- * @Date: 2022-04-02 15:12:06
- * @LastEditTime: 2022-04-12 21:46:41
- * @Description: Do not edit
- */
 /**
  * @param {number} limit 二进制文件大小
  * @return {string} size  转换后的文件大小

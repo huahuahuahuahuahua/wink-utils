@@ -42,4 +42,4 @@ size  转换后的文件大小
 
 #### Defined in
 
-[changefilesize.ts:14](https://github.com/huahuahuahuahuahua/wink-utils/blob/a2b0a79/src/changefilesize.ts#L14)
+[changefilesize.ts:8](https://github.com/huahuahuahuahuahua/wink-utils/blob/afe7fd1/src/changefilesize.ts#L8)

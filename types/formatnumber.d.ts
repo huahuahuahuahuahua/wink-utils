@@ -6,7 +6,4 @@
  * @Descripttion: 转换number为指定数值
  */
 export declare function formatNumber(num: number): object;
-declare const _default: {
-    formatNumber: typeof formatNumber;
-};
-export default _default;
+export default formatNumber;

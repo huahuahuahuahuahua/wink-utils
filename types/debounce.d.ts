@@ -34,7 +34,4 @@ interface IOptions {
  */
 export declare type TAnyFunction = (...args: any[]) => void;
 export declare function debounce(func: TAnyFunction, wait?: number, options?: IOptions): TAnyFunction;
-declare const _default: {
-    debounce: typeof debounce;
-};
-export default _default;
+export default debounce;

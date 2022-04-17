@@ -1,9 +1,3 @@
-/*
- * @Author: t_winkjqzhang
- * @Date: 2022-03-31 15:54:59
- * @LastEditTime: 2022-04-02 17:57:27
- * @Description: Do not edit
- */
 //分离url参数，获取tagid
 
 /**

@@ -35,6 +35,36 @@ let firstCharUpperCase = (str) => {
 let addEsmMiddle = (str) => {
   return str.split(".").join(".esm.");
 };
+
+function sh(commend, cwd = "./") {
+  return new Promise(function (resolve, reject) {
+    const work = exec(commend, { cwd: cwd }, function (err, stdout, stderr) {
+      // console.log(err, stderr)
+      if (err) {
+        // console.log(err);
+        resolve({
+          code: -1,
+          msg: JSON.stringify(err),
+        });
+      } else {
+        // console.log(`stdout: ${stdout}`);
+        resolve({
+          code: 1,
+          stdout,
+        });
+      }
+    });
+
+    work.stdout.on("data", function (data) {
+      console.log("stdout: " + data);
+    });
+
+    work.stderr.on("data", function (data) {
+      console.log("stderr: " + data);
+    });
+  });
+}
+
 /** 清除 types 文件 */
 const taskCleanTypes = () =>
   gulp.src("types", { allowEmpty: true }).pipe(clean());
@@ -46,7 +76,7 @@ const taskOutputTypes = () => {
   )} ${inputFileNameNoExtList
     .filter((name) => !/\./.test(name))
     .map((name) => `./src/${name}.ts`)
-    .join(" ")} --declaration --declarationDir ./types --outDir ./types`;
+    .join(" ")} --declaration --declarationDir ./types --outDir ./types `;
   return new Promise((resolve, reject) => {
     exec(cmdStr, (err, stdout, stderr) => {
       if (err) {
@@ -59,6 +89,19 @@ const taskOutputTypes = () => {
         resolve();
       }
     });
+  }).then(() => {
+    // exec(
+    //   `del ${path.resolve(paths.root, "types/*.js")}`,
+    //   (err, stdout, stderr) => {
+    //     if (err) {
+    //       console.log(err);
+    //       console.warn(new Date(), " 清除js命令执行失败");
+    //     } else {
+    //       console.log(stdout);
+    //       console.warn(new Date(), " 清除js命令执行成功");
+    //     }
+    //   }
+    // );
   });
 };
 
@@ -318,7 +361,25 @@ const taskeslint = () => {
     resolve();
   });
 };
-const taskUpdateVersion = () => {
+const taskJestTest = () => {
+  return new Promise(function (resolve, reject) {
+    const cmdStr = `${path.resolve(
+      "./node_modules/.bin/jest"
+    )} --verbose -u --coverage --colors`;
+    exec(cmdStr, (err, stdout, stderr) => {
+      if (err) {
+        console.log(err);
+        console.warn(new Date(), " eslint编译命令执行失败");
+      } else {
+        console.log(stdout);
+        console.warn(new Date(), " eslint编译命令执行成功");
+      }
+    });
+
+    resolve();
+  });
+};
+const taskUpdateVersion = async () => {
   return new Promise(function (resolve, reject) {
     //更新版本
     exec(`npm version patch`, (err, stdout, stderr) => {
@@ -334,22 +395,48 @@ const taskUpdateVersion = () => {
     resolve();
   });
 };
+//发布版本
 const taskPublish = () => {
-  return new Promise((resolve, reject) => {
-    //发布版本
-    exec(`npm publish`, (err, stdout, stderr) => {
-      if (err) {
-        reject(err);
-        throw new Error(new Date(), " 发布版本命令执行失败");
-      } else {
-        console.log(stdout);
-        console.warn(new Date(), " 发布版本命令执行成功");
-      }
-    });
-    resolve();
+  return new Promise(async (resolve, reject) => {
+    // 升级版本号
+    console.log("--------------------开发发布包到npm");
+    const versionFlag = await sh(
+      "npm version publish",
+      path.join(__dirname, "..", "build")
+    );
+    if (versionFlag.code === 1) {
+      console.log("------------------发布版本成功");
+      resolve();
+    } else {
+      console.log(versionFlag.msg);
+      return;
+    }
   });
 };
-
+const taskAddTag = async (done) => {
+  // 自动打 tag
+  const addTagFlag = await sh(
+    "git tag " + config.version,
+    path.join(__dirname, "..")
+  );
+  if (addTagFlag.code === 1) {
+    console.log("..........................打 tag 成功");
+  } else {
+    console.log(addTagFlag.msg);
+    return;
+  }
+  const pushTagFlag = await sh(
+    "git push origin " + config.version,
+    path.join(__dirname, "..")
+  );
+  if (pushTagFlag.code === 1) {
+    console.log("..........................tag 推送远程成功");
+  } else {
+    console.log(pushTagFlag.msg);
+    return;
+  }
+  done();
+};
 /** type doc 任务 */
 const taskTypedoc = gulp.series(taskCleanTypedoc, taskOutputTypedoc); //taskOutputTypedoc
 
@@ -364,6 +451,7 @@ exports.buildTypes = gulp.series(
   exports.doc
 );
 exports.build = gulp.parallel(
+  taskJestTest,
   taskeslint,
   taskBuildTsProject,
   taskchangelog,
@@ -373,8 +461,10 @@ exports.build = gulp.parallel(
 exports.taskBuildUmdEsm = taskBuildUmdEsm;
 exports.taskOutputTypes = taskOutputTypes;
 exports.taskBuildTsProject = taskBuildTsProject;
-exports.publish = gulp.series(taskUpdateVersion, taskPublish);
+exports.publish = gulp.series(taskUpdateVersion, taskPublish, taskAddTag);
 exports.taskUpdateVersion = taskUpdateVersion;
+exports.taskJestTest = taskJestTest;
+
 exports.changelog = taskchangelog;
 exports.dev = taskDev;
 exports.default = (cb) => cb();

@@ -9,6 +9,7 @@
 - [TAnyFunction](index.md#tanyfunction)
 - [UrlGetRequest](index.md#urlgetrequest)
 - [changefilesize](index.md#changefilesize)
+- [cloneDeep](index.md#clonedeep)
 - [debounce](index.md#debounce)
 - [formatNumber](index.md#formatnumber)
 - [isObject](index.md#isobject)
@@ -31,6 +32,12 @@ ___
 ### changefilesize
 
 Re-exports [changefilesize](changefilesize.md#changefilesize)
+
+___
+
+### cloneDeep
+
+Re-exports [cloneDeep](cloneDeep.md#clonedeep)
 
 ___
 

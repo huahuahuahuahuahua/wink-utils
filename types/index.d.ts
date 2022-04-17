@@ -11,3 +11,4 @@ export * from "./debounce";
 export * from "./changefilesize";
 export * from "./formatnumber";
 export * from "./isObject";
+export * from "./cloneDeep";

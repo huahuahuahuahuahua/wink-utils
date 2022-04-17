@@ -24,8 +24,6 @@ Renames and re-exports [throttle](throttle.md#throttle)
 
 ▸ **throttle**(`func`, `wait`, `options?`): [`TAnyFunction`](debounce.md#tanyfunction)
 
-**`date:`** 2022-04-02 10:57:20
-
 #### Parameters
 
 | Name | Type |
@@ -40,4 +38,4 @@ Renames and re-exports [throttle](throttle.md#throttle)
 
 #### Defined in
 
-[throttle.ts:13](https://github.com/huahuahuahuahuahua/wink-utils/blob/a2b0a79/src/throttle.ts#L13)
+[throttle.ts:17](https://github.com/huahuahuahuahuahua/wink-utils/blob/afe7fd1/src/throttle.ts#L17)

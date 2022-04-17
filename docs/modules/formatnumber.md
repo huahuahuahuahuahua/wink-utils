@@ -4,7 +4,7 @@
 
 ## Table of contents
 
-### Variables
+### References
 
 - [default](formatnumber.md#default)
 
@@ -12,21 +12,11 @@
 
 - [formatNumber](formatnumber.md#formatnumber)
 
-## Variables
+## References
 
 ### default
 
-• **default**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `formatNumber` | (`num`: `number`) => `object` |
-
-#### Defined in
-
-[formatnumber.ts:73](https://github.com/huahuahuahuahuahua/wink-utils/blob/a2b0a79/src/formatnumber.ts#L73)
+Renames and re-exports [formatNumber](formatnumber.md#formatnumber)
 
 ## Functions
 
@@ -54,4 +44,4 @@ number:转换后的值，value：倍数
 
 #### Defined in
 
-[formatnumber.ts:14](https://github.com/huahuahuahuahuahua/wink-utils/blob/a2b0a79/src/formatnumber.ts#L14)
+[formatnumber.ts:8](https://github.com/huahuahuahuahuahua/wink-utils/blob/afe7fd1/src/formatnumber.ts#L8)

@@ -4,17 +4,23 @@
 
 ## Table of contents
 
+### References
+
+- [default](debounce.md#default)
+
 ### Type aliases
 
 - [TAnyFunction](debounce.md#tanyfunction)
 
-### Variables
-
-- [default](debounce.md#default)
-
 ### Functions
 
 - [debounce](debounce.md#debounce)
+
+## References
+
+### default
+
+Renames and re-exports [debounce](debounce.md#debounce)
 
 ## Type aliases
 
@@ -61,23 +67,7 @@ jQuery(window).on('popstate', debounced.cancel);
 
 #### Defined in
 
-[debounce.ts:43](https://github.com/huahuahuahuahuahua/wink-utils/blob/a2b0a79/src/debounce.ts#L43)
-
-## Variables
-
-### default
-
-• **default**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `debounce` | (`func`: [`TAnyFunction`](debounce.md#tanyfunction), `wait`: `number`, `options`: `IOptions`) => [`TAnyFunction`](debounce.md#tanyfunction) |
-
-#### Defined in
-
-[debounce.ts:179](https://github.com/huahuahuahuahuahua/wink-utils/blob/a2b0a79/src/debounce.ts#L179)
+[debounce.ts:42](https://github.com/huahuahuahuahuahua/wink-utils/blob/afe7fd1/src/debounce.ts#L42)
 
 ## Functions
 
@@ -99,4 +89,4 @@ jQuery(window).on('popstate', debounced.cancel);
 
 #### Defined in
 
-[debounce.ts:45](https://github.com/huahuahuahuahuahua/wink-utils/blob/a2b0a79/src/debounce.ts#L45)
+[debounce.ts:44](https://github.com/huahuahuahuahuahua/wink-utils/blob/afe7fd1/src/debounce.ts#L44)

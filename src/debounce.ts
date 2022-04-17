@@ -39,13 +39,12 @@ interface IOptions {
  * jQuery(window).on('popstate', debounced.cancel);
  */
 
-
-export type TAnyFunction = (...args: any[]) => void
-import isObject from './isObject'
+export type TAnyFunction = (...args: any[]) => void;
+import isObject from "./isObject";
 export function debounce(
   func: TAnyFunction,
   wait = 1000,
-  options: IOptions = { }
+  options: IOptions = {}
 ): TAnyFunction {
   let lastArgs, //上次调用参数
     lastThis, //上次调用this
@@ -87,7 +86,7 @@ export function debounce(
     return leading ? invokeFunc(time) : result; //如果leading为true，调用func,否则返回result
   }
 
-  function remainingWait(time): number{
+  function remainingWait(time): number {
     //设置还需要等待的时间
     const timeSinceLastCall = time - lastCallTime, //距离上次触发的时间
       timeSinceLastInvoke = time - lastInvokeTime, //距离上次调用func的时间
@@ -176,6 +175,4 @@ export function debounce(
   debounced.flush = flush;
   return debounced;
 }
-export default {
-  debounce,
-};
+export default debounce;
