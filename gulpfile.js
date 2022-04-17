@@ -379,8 +379,8 @@ const taskJestTest = () => {
     resolve();
   });
 };
-const taskUpdateVersion = async () => {
-  return new Promise(function async(resolve, reject) {
+const taskUpdateVersion = () => {
+  return new Promise(function (resolve, reject) {
     //更新版本
     exec(`npm version patch`, (err, stdout, stderr) => {
       if (err) {
@@ -396,22 +396,21 @@ const taskUpdateVersion = async () => {
   });
 };
 //发布版本
-const taskPublish = async () => {
-  return new Promise(async (resolve, reject) => {
-    // 升级版本号
-    console.log("--------------------开发发布包到npm");
-    const versionFlag = await sh(
-      "npm version publish",
-      path.join(__dirname, "..", "build")
-    );
-    if (versionFlag.code === 1) {
-      console.log("------------------发布版本成功");
-      resolve();
-    } else {
-      console.log(versionFlag.msg);
-      return;
-    }
-  });
+const taskPublish = async (done) => {
+  // 升级版本号
+  console.log("--------------------开发发布包到npm");
+  const versionFlag = await sh(
+    "npm version publish",
+    path.join(__dirname, "..", "build")
+  );
+  if (versionFlag.code === 1) {
+    console.log("------------------发布版本成功");
+    resolve();
+  } else {
+    console.log(versionFlag.msg);
+    return;
+  }
+  done();
 };
 const taskAddTag = async (done) => {
   // 自动打 tag
