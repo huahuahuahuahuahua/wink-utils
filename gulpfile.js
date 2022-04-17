@@ -415,7 +415,7 @@ const taskPublish = async (done) => {
 const taskAddTag = async (done) => {
   // 自动打 tag
   const addTagFlag = await sh(
-    "git tag " + config.version,
+    "git tag " + pkg.version,
     path.join(__dirname, "..")
   );
   if (addTagFlag.code === 1) {
@@ -425,7 +425,7 @@ const taskAddTag = async (done) => {
     return;
   }
   const pushTagFlag = await sh(
-    "git push origin " + config.version,
+    "git push origin " + pkg.version,
     path.join(__dirname, "..")
   );
   if (pushTagFlag.code === 1) {
