@@ -399,10 +399,7 @@ const taskUpdateVersion = () => {
 const taskPublish = async (done) => {
   // 升级版本号
   console.log("--------------------开发发布包到npm");
-  const versionFlag = await sh(
-    "npm publish",
-    path.join(__dirname, "..", "build")
-  );
+  const versionFlag = await sh("npm publish");
   if (versionFlag.code === 1) {
     console.log("------------------发布版本成功");
     resolve();
