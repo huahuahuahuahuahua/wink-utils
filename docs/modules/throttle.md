@@ -38,4 +38,4 @@ Renames and re-exports [throttle](throttle.md#throttle)
 
 #### Defined in
 
-[throttle.ts:17](https://github.com/huahuahuahuahuahua/wink-utils/blob/afe7fd1/src/throttle.ts#L17)
+[throttle.ts:17](https://github.com/huahuahuahuahuahua/wink-utils/blob/143c432/src/throttle.ts#L17)

@@ -30,6 +30,19 @@
 
 # 工具库更新日志
 
+## [1.0.5](https://github.com/huahuahuahuahuahua/wink-utils/compare/v1.0.4...v1.0.5) (2022-04-17)
+
+
+
+## [1.0.4](https://github.com/huahuahuahuahuahua/wink-utils/compare/v1.0.2...v1.0.4) (2022-04-17)
+
+
+### Features
+
+* **src:** 增加cloneDeep方法，修复throttle ([413bebe](https://github.com/huahuahuahuahuahua/wink-utils/commit/413bebee7125d643d49a6357531dc1e6aef22701))
+
+
+
 ## [1.0.2](https://github.com/huahuahuahuahuahua/wink-utils/compare/v1.0.1...v1.0.2) (2022-04-13)
 
 

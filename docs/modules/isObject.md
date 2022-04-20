@@ -42,4 +42,4 @@ Renames and re-exports [isObject](isObject.md#isobject)
 
 #### Defined in
 
-[isObject.ts:8](https://github.com/huahuahuahuahuahua/wink-utils/blob/afe7fd1/src/isObject.ts#L8)
+[isObject.ts:8](https://github.com/huahuahuahuahuahua/wink-utils/blob/143c432/src/isObject.ts#L8)

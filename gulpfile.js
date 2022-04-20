@@ -9,7 +9,6 @@ const conventionalChangelog = require("conventional-changelog");
 const { resolve } = require("path");
 /** 需要编译的文件名（不带后缀名） */
 let inputFileNameNoExtList = pkg._need_handle_files;
-let version = pkg._version;
 const paths = {
   root: path.join(__dirname, "/"),
   src: path.join(__dirname, "src"),
@@ -106,12 +105,17 @@ const taskOutputTypes = () => {
 };
 
 /** 清除 types 文件 */
-const taskCleanTypesDirUnuseFile = () =>
+const taskCleanTypesDirUnuseFile = (done) => {
   gulp.src("types/*.js", { allowEmpty: true }).pipe(clean());
-
+  done();
+};
+// const taskCleanDistJs = () => {
+//   gulp.src("dist/*.js", { allowEmpty: true }).pipe(clean());
+//   gulp.src("dist/*.esm.js", { allowEmpty: true }).pipe(clean());
+// };
 /** 使用 rollup 构建 ts 项目 */
-const taskBuildTsProject = () =>
-  exec(`${path.resolve("./node_modules/.bin/rollup")} -c`);
+// const taskBuildTsProject = () =>
+//   exec(`${path.resolve("./node_modules/.bin/rollup")} -c`);
 
 /** 使用 parcel 构建 umd 项目 */
 const taskBuildUmdEsm = () =>
@@ -421,6 +425,7 @@ const taskAddTag = async (done) => {
   //   console.log(addTagFlag.msg);
   //   return;
   // }
+  const pkg = require("./package.json");
   const pushTagFlag = await sh(
     "git push origin " + pkg.version,
     path.join(__dirname, "..")
@@ -449,18 +454,20 @@ exports.buildTypes = gulp.series(
 exports.build = gulp.parallel(
   taskJestTest,
   taskeslint,
-  taskBuildTsProject,
+  // taskBuildTsProject,
   taskchangelog,
   exports.buildTypes,
   taskBuildUmdEsm
+  // gulp.series(taskBuildUmdEsm, taskCleanDistJs)
 );
 exports.taskBuildUmdEsm = taskBuildUmdEsm;
 exports.taskOutputTypes = taskOutputTypes;
-exports.taskBuildTsProject = taskBuildTsProject;
+// exports.taskBuildTsProject = taskBuildTsProject;
 exports.publish = gulp.series(taskUpdateVersion, taskPublish, taskAddTag);
 exports.taskUpdateVersion = taskUpdateVersion;
 exports.taskJestTest = taskJestTest;
-
+exports.taskOutputTypes = taskOutputTypes;
+exports.taskCleanTypesDirUnuseFile = taskCleanTypesDirUnuseFile;
 exports.changelog = taskchangelog;
 exports.dev = taskDev;
 exports.default = (cb) => cb();
