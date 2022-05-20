@@ -6,22 +6,22 @@
 	"originalName": "",
 	"children": [
 		{
-			"id": 65,
+			"id": 69,
 			"name": "UrlGetRequest",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 70,
+					"id": 74,
 					"name": "default",
 					"kind": 16777216,
 					"kindString": "Reference",
 					"flags": {},
-					"target": 66
+					"target": 70
 				},
 				{
-					"id": 66,
+					"id": 70,
 					"name": "UrlGetRequest",
 					"kind": 64,
 					"kindString": "Function",
@@ -35,7 +35,7 @@
 					],
 					"signatures": [
 						{
-							"id": 67,
+							"id": 71,
 							"name": "UrlGetRequest",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -55,7 +55,7 @@
 							},
 							"parameters": [
 								{
-									"id": 68,
+									"id": 72,
 									"name": "url",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -69,7 +69,7 @@
 									}
 								},
 								{
-									"id": 69,
+									"id": 73,
 									"name": "variable",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -105,14 +105,14 @@
 					"title": "References",
 					"kind": 16777216,
 					"children": [
-						70
+						74
 					]
 				},
 				{
 					"title": "Functions",
 					"kind": 64,
 					"children": [
-						66
+						70
 					]
 				}
 			],
@@ -126,13 +126,92 @@
 		},
 		{
 			"id": 1,
+			"name": "addObjIterator",
+			"kind": 2,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 2,
+					"name": "default",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "addObjIterator.ts",
+							"line": 10,
+							"character": 9
+						}
+					],
+					"signatures": [
+						{
+							"id": 3,
+							"name": "default",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"returns": "newObj //深拷贝后添加迭代器",
+								"tags": [
+									{
+										"tag": "msg:a",
+										"text": "good method for add iterator"
+									},
+									{
+										"tag": "descripttion:",
+										"text": "给对象添加迭代器，make it possiable to for...in map forEach\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 4,
+									"name": "obj",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "object"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "object"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						2
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "addObjIterator.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 5,
 			"name": "cacheAsync",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 5,
+					"id": 9,
 					"name": "TAnyFunction",
 					"kind": 4194304,
 					"kindString": "Type alias",
@@ -147,7 +226,7 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 6,
+							"id": 10,
 							"name": "__type",
 							"kind": 65536,
 							"kindString": "Type literal",
@@ -161,14 +240,14 @@
 							],
 							"signatures": [
 								{
-									"id": 7,
+									"id": 11,
 									"name": "__type",
 									"kind": 4096,
 									"kindString": "Call signature",
 									"flags": {},
 									"parameters": [
 										{
-											"id": 8,
+											"id": 12,
 											"name": "args",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -194,7 +273,7 @@
 					}
 				},
 				{
-					"id": 9,
+					"id": 13,
 					"name": "OldcacheAsync",
 					"kind": 64,
 					"kindString": "Function",
@@ -208,21 +287,21 @@
 					],
 					"signatures": [
 						{
-							"id": 10,
+							"id": 14,
 							"name": "OldcacheAsync",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 11,
+									"id": 15,
 									"name": "fn",
 									"kind": 32768,
 									"kindString": "Parameter",
 									"flags": {},
 									"type": {
 										"type": "reference",
-										"id": 5,
+										"id": 9,
 										"name": "TAnyFunction"
 									}
 								}
@@ -230,21 +309,21 @@
 							"type": {
 								"type": "reflection",
 								"declaration": {
-									"id": 12,
+									"id": 16,
 									"name": "__type",
 									"kind": 65536,
 									"kindString": "Type literal",
 									"flags": {},
 									"signatures": [
 										{
-											"id": 13,
+											"id": 17,
 											"name": "__type",
 											"kind": 4096,
 											"kindString": "Call signature",
 											"flags": {},
 											"parameters": [
 												{
-													"id": 14,
+													"id": 18,
 													"name": "str",
 													"kind": 32768,
 													"kindString": "Parameter",
@@ -284,7 +363,7 @@
 					]
 				},
 				{
-					"id": 15,
+					"id": 19,
 					"name": "UpdateCacheAsync",
 					"kind": 64,
 					"kindString": "Function",
@@ -298,7 +377,7 @@
 					],
 					"signatures": [
 						{
-							"id": 16,
+							"id": 20,
 							"name": "UpdateCacheAsync",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -317,7 +396,7 @@
 							},
 							"parameters": [
 								{
-									"id": 17,
+									"id": 21,
 									"name": "promiseGenerator",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -331,7 +410,7 @@
 									}
 								},
 								{
-									"id": 18,
+									"id": 22,
 									"name": "symbol",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -346,21 +425,21 @@
 							"type": {
 								"type": "reflection",
 								"declaration": {
-									"id": 19,
+									"id": 23,
 									"name": "__type",
 									"kind": 65536,
 									"kindString": "Type literal",
 									"flags": {},
 									"signatures": [
 										{
-											"id": 20,
+											"id": 24,
 											"name": "__type",
 											"kind": 4096,
 											"kindString": "Call signature",
 											"flags": {},
 											"parameters": [
 												{
-													"id": 21,
+													"id": 25,
 													"name": "params",
 													"kind": 32768,
 													"kindString": "Parameter",
@@ -391,7 +470,7 @@
 					]
 				},
 				{
-					"id": 2,
+					"id": 6,
 					"name": "fetchData",
 					"kind": 64,
 					"kindString": "Function",
@@ -405,14 +484,14 @@
 					],
 					"signatures": [
 						{
-							"id": 3,
+							"id": 7,
 							"name": "fetchData",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 4,
+									"id": 8,
 									"name": "a",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -453,16 +532,16 @@
 					"title": "Type aliases",
 					"kind": 4194304,
 					"children": [
-						5
+						9
 					]
 				},
 				{
 					"title": "Functions",
 					"kind": 64,
 					"children": [
-						9,
-						15,
-						2
+						13,
+						19,
+						6
 					]
 				}
 			],
@@ -475,22 +554,22 @@
 			]
 		},
 		{
-			"id": 22,
+			"id": 26,
 			"name": "changefilesize",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 26,
+					"id": 30,
 					"name": "default",
 					"kind": 16777216,
 					"kindString": "Reference",
 					"flags": {},
-					"target": 23
+					"target": 27
 				},
 				{
-					"id": 23,
+					"id": 27,
 					"name": "changefilesize",
 					"kind": 64,
 					"kindString": "Function",
@@ -504,7 +583,7 @@
 					],
 					"signatures": [
 						{
-							"id": 24,
+							"id": 28,
 							"name": "changefilesize",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -524,7 +603,7 @@
 							},
 							"parameters": [
 								{
-									"id": 25,
+									"id": 29,
 									"name": "limit",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -551,14 +630,14 @@
 					"title": "References",
 					"kind": 16777216,
 					"children": [
-						26
+						30
 					]
 				},
 				{
 					"title": "Functions",
 					"kind": 64,
 					"children": [
-						23
+						27
 					]
 				}
 			],
@@ -571,22 +650,22 @@
 			]
 		},
 		{
-			"id": 27,
+			"id": 31,
 			"name": "cloneDeep",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 31,
+					"id": 35,
 					"name": "default",
 					"kind": 16777216,
 					"kindString": "Reference",
 					"flags": {},
-					"target": 28
+					"target": 32
 				},
 				{
-					"id": 28,
+					"id": 32,
 					"name": "cloneDeep",
 					"kind": 64,
 					"kindString": "Function",
@@ -600,7 +679,7 @@
 					],
 					"signatures": [
 						{
-							"id": 29,
+							"id": 33,
 							"name": "cloneDeep",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -620,7 +699,7 @@
 							},
 							"parameters": [
 								{
-									"id": 30,
+									"id": 34,
 									"name": "obj",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -647,14 +726,14 @@
 					"title": "References",
 					"kind": 16777216,
 					"children": [
-						31
+						35
 					]
 				},
 				{
 					"title": "Functions",
 					"kind": 64,
 					"children": [
-						28
+						32
 					]
 				}
 			],
@@ -667,22 +746,22 @@
 			]
 		},
 		{
-			"id": 32,
+			"id": 36,
 			"name": "debounce",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 42,
+					"id": 46,
 					"name": "default",
 					"kind": 16777216,
 					"kindString": "Reference",
 					"flags": {},
-					"target": 33
+					"target": 37
 				},
 				{
-					"id": 38,
+					"id": 42,
 					"name": "TAnyFunction",
 					"kind": 4194304,
 					"kindString": "Type alias",
@@ -697,7 +776,7 @@
 					"type": {
 						"type": "reflection",
 						"declaration": {
-							"id": 39,
+							"id": 43,
 							"name": "__type",
 							"kind": 65536,
 							"kindString": "Type literal",
@@ -711,7 +790,7 @@
 							],
 							"signatures": [
 								{
-									"id": 40,
+									"id": 44,
 									"name": "__type",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -728,7 +807,7 @@
 									},
 									"parameters": [
 										{
-											"id": 41,
+											"id": 45,
 											"name": "args",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -754,7 +833,7 @@
 					}
 				},
 				{
-					"id": 33,
+					"id": 37,
 					"name": "debounce",
 					"kind": 64,
 					"kindString": "Function",
@@ -768,26 +847,26 @@
 					],
 					"signatures": [
 						{
-							"id": 34,
+							"id": 38,
 							"name": "debounce",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 35,
+									"id": 39,
 									"name": "func",
 									"kind": 32768,
 									"kindString": "Parameter",
 									"flags": {},
 									"type": {
 										"type": "reference",
-										"id": 38,
+										"id": 42,
 										"name": "TAnyFunction"
 									}
 								},
 								{
-									"id": 36,
+									"id": 40,
 									"name": "wait",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -799,7 +878,7 @@
 									"defaultValue": "1000"
 								},
 								{
-									"id": 37,
+									"id": 41,
 									"name": "options",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -813,7 +892,7 @@
 							],
 							"type": {
 								"type": "reference",
-								"id": 38,
+								"id": 42,
 								"name": "TAnyFunction"
 							}
 						}
@@ -825,21 +904,21 @@
 					"title": "References",
 					"kind": 16777216,
 					"children": [
-						42
+						46
 					]
 				},
 				{
 					"title": "Type aliases",
 					"kind": 4194304,
 					"children": [
-						38
+						42
 					]
 				},
 				{
 					"title": "Functions",
 					"kind": 64,
 					"children": [
-						33
+						37
 					]
 				}
 			],
@@ -852,22 +931,22 @@
 			]
 		},
 		{
-			"id": 43,
+			"id": 47,
 			"name": "formatnumber",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 47,
+					"id": 51,
 					"name": "default",
 					"kind": 16777216,
 					"kindString": "Reference",
 					"flags": {},
-					"target": 44
+					"target": 48
 				},
 				{
-					"id": 44,
+					"id": 48,
 					"name": "formatNumber",
 					"kind": 64,
 					"kindString": "Function",
@@ -881,7 +960,7 @@
 					],
 					"signatures": [
 						{
-							"id": 45,
+							"id": 49,
 							"name": "formatNumber",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -905,7 +984,7 @@
 							},
 							"parameters": [
 								{
-									"id": 46,
+									"id": 50,
 									"name": "num",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -930,14 +1009,14 @@
 					"title": "References",
 					"kind": 16777216,
 					"children": [
-						47
+						51
 					]
 				},
 				{
 					"title": "Functions",
 					"kind": 64,
 					"children": [
-						44
+						48
 					]
 				}
 			],
@@ -950,75 +1029,75 @@
 			]
 		},
 		{
-			"id": 48,
+			"id": 52,
 			"name": "index",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 74,
+					"id": 78,
 					"name": "TAnyFunction",
 					"kind": 16777216,
 					"kindString": "Reference",
 					"flags": {},
-					"target": 38
+					"target": 42
 				},
 				{
-					"id": 72,
+					"id": 76,
 					"name": "UrlGetRequest",
 					"kind": 16777216,
 					"kindString": "Reference",
 					"flags": {},
-					"target": 66
+					"target": 70
 				},
 				{
-					"id": 75,
+					"id": 79,
 					"name": "changefilesize",
 					"kind": 16777216,
 					"kindString": "Reference",
 					"flags": {},
-					"target": 23
+					"target": 27
 				},
 				{
-					"id": 78,
+					"id": 82,
 					"name": "cloneDeep",
 					"kind": 16777216,
 					"kindString": "Reference",
 					"flags": {},
-					"target": 28
+					"target": 32
 				},
 				{
-					"id": 73,
+					"id": 77,
 					"name": "debounce",
 					"kind": 16777216,
 					"kindString": "Reference",
 					"flags": {},
-					"target": 33
+					"target": 37
 				},
 				{
-					"id": 76,
+					"id": 80,
 					"name": "formatNumber",
 					"kind": 16777216,
 					"kindString": "Reference",
 					"flags": {},
-					"target": 44
+					"target": 48
 				},
 				{
-					"id": 77,
+					"id": 81,
 					"name": "isObject",
 					"kind": 16777216,
 					"kindString": "Reference",
 					"flags": {},
-					"target": 50
+					"target": 54
 				},
 				{
-					"id": 71,
+					"id": 75,
 					"name": "throttle",
 					"kind": 16777216,
 					"kindString": "Reference",
 					"flags": {},
-					"target": 59
+					"target": 63
 				}
 			],
 			"groups": [
@@ -1026,14 +1105,14 @@
 					"title": "References",
 					"kind": 16777216,
 					"children": [
-						74,
-						72,
-						75,
 						78,
-						73,
 						76,
+						79,
+						82,
 						77,
-						71
+						80,
+						81,
+						75
 					]
 				}
 			],
@@ -1046,22 +1125,22 @@
 			]
 		},
 		{
-			"id": 49,
+			"id": 53,
 			"name": "isObject",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 53,
+					"id": 57,
 					"name": "default",
 					"kind": 16777216,
 					"kindString": "Reference",
 					"flags": {},
-					"target": 50
+					"target": 54
 				},
 				{
-					"id": 50,
+					"id": 54,
 					"name": "isObject",
 					"kind": 64,
 					"kindString": "Function",
@@ -1075,7 +1154,7 @@
 					],
 					"signatures": [
 						{
-							"id": 51,
+							"id": 55,
 							"name": "isObject",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -1098,7 +1177,7 @@
 							},
 							"parameters": [
 								{
-									"id": 52,
+									"id": 56,
 									"name": "obj",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1125,14 +1204,14 @@
 					"title": "References",
 					"kind": 16777216,
 					"children": [
-						53
+						57
 					]
 				},
 				{
 					"title": "Functions",
 					"kind": 64,
 					"children": [
-						50
+						54
 					]
 				}
 			],
@@ -1145,22 +1224,22 @@
 			]
 		},
 		{
-			"id": 54,
+			"id": 58,
 			"name": "main",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 57,
+					"id": 61,
 					"name": "default",
 					"kind": 16777216,
 					"kindString": "Reference",
 					"flags": {},
-					"target": 55
+					"target": 59
 				},
 				{
-					"id": 55,
+					"id": 59,
 					"name": "main",
 					"kind": 64,
 					"kindString": "Function",
@@ -1174,7 +1253,7 @@
 					],
 					"signatures": [
 						{
-							"id": 56,
+							"id": 60,
 							"name": "main",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -1192,14 +1271,14 @@
 					"title": "References",
 					"kind": 16777216,
 					"children": [
-						57
+						61
 					]
 				},
 				{
 					"title": "Functions",
 					"kind": 64,
 					"children": [
-						55
+						59
 					]
 				}
 			],
@@ -1212,22 +1291,22 @@
 			]
 		},
 		{
-			"id": 58,
+			"id": 62,
 			"name": "throttle",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 64,
+					"id": 68,
 					"name": "default",
 					"kind": 16777216,
 					"kindString": "Reference",
 					"flags": {},
-					"target": 59
+					"target": 63
 				},
 				{
-					"id": 59,
+					"id": 63,
 					"name": "throttle",
 					"kind": 64,
 					"kindString": "Function",
@@ -1241,26 +1320,26 @@
 					],
 					"signatures": [
 						{
-							"id": 60,
+							"id": 64,
 							"name": "throttle",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 61,
+									"id": 65,
 									"name": "func",
 									"kind": 32768,
 									"kindString": "Parameter",
 									"flags": {},
 									"type": {
 										"type": "reference",
-										"id": 38,
+										"id": 42,
 										"name": "TAnyFunction"
 									}
 								},
 								{
-									"id": 62,
+									"id": 66,
 									"name": "wait",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1271,7 +1350,7 @@
 									}
 								},
 								{
-									"id": 63,
+									"id": 67,
 									"name": "options",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1285,7 +1364,7 @@
 							],
 							"type": {
 								"type": "reference",
-								"id": 38,
+								"id": 42,
 								"name": "TAnyFunction"
 							}
 						}
@@ -1297,14 +1376,14 @@
 					"title": "References",
 					"kind": 16777216,
 					"children": [
-						64
+						68
 					]
 				},
 				{
 					"title": "Functions",
 					"kind": 64,
 					"children": [
-						59
+						63
 					]
 				}
 			],
@@ -1322,16 +1401,17 @@
 			"title": "Modules",
 			"kind": 2,
 			"children": [
-				65,
+				69,
 				1,
-				22,
-				27,
-				32,
-				43,
-				48,
-				49,
-				54,
-				58
+				5,
+				26,
+				31,
+				36,
+				47,
+				52,
+				53,
+				58,
+				62
 			]
 		}
 	]

@@ -30,6 +30,15 @@
 
 # 工具库更新日志
 
+## [1.0.6](https://github.com/huahuahuahuahuahua/wink-utils/compare/v1.0.5...v1.0.6) (2022-04-20)
+
+
+### Bug Fixes
+
+* 找不到包问题 ([d2ffd69](https://github.com/huahuahuahuahuahua/wink-utils/commit/d2ffd69bf03316ad8f0b71edafb8b2ac7db509f2))
+
+
+
 ## [1.0.5](https://github.com/huahuahuahuahuahua/wink-utils/compare/v1.0.4...v1.0.5) (2022-04-17)
 
 

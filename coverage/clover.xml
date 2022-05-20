@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1650469172806" clover="3.2.0">
-  <project timestamp="1650469172806" name="All files">
-    <metrics statements="152" coveredstatements="130" conditionals="85" coveredconditionals="64" methods="18" coveredmethods="14" elements="255" coveredelements="208" complexity="0" loc="152" ncloc="152" packages="1" files="9" classes="9"/>
+<coverage generated="1650997634207" clover="3.2.0">
+  <project timestamp="1650997634207" name="All files">
+    <metrics statements="165" coveredstatements="134" conditionals="87" coveredconditionals="64" methods="21" coveredmethods="14" elements="273" coveredelements="212" complexity="0" loc="165" ncloc="165" packages="1" files="10" classes="10"/>
     <file name="UrlGetRequest.ts" path="C:\Users\10177\Desktop\自建工具库\wink-utils\src\UrlGetRequest.ts">
       <metrics statements="11" coveredstatements="9" conditionals="4" coveredconditionals="3" methods="2" coveredmethods="1"/>
       <line num="10" count="5" type="stmt"/>
@@ -15,6 +15,21 @@
       <line num="22" count="5" type="cond" truecount="1" falsecount="0"/>
       <line num="24" count="1" type="stmt"/>
       <line num="26" count="5" type="stmt"/>
+    </file>
+    <file name="addObjIterator.ts" path="C:\Users\10177\Desktop\自建工具库\wink-utils\src\addObjIterator.ts">
+      <metrics statements="12" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <line num="1" count="5" type="stmt"/>
+      <line num="2" count="5" type="stmt"/>
+      <line num="11" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="12" count="0" type="stmt"/>
+      <line num="13" count="0" type="stmt"/>
+      <line num="14" count="0" type="stmt"/>
+      <line num="15" count="0" type="stmt"/>
+      <line num="16" count="0" type="stmt"/>
+      <line num="18" count="0" type="stmt"/>
+      <line num="25" count="0" type="stmt"/>
+      <line num="27" count="0" type="stmt"/>
+      <line num="32" count="5" type="stmt"/>
     </file>
     <file name="changefilesize.ts" path="C:\Users\10177\Desktop\自建工具库\wink-utils\src\changefilesize.ts">
       <metrics statements="16" coveredstatements="15" conditionals="7" coveredconditionals="7" methods="1" coveredmethods="1"/>
@@ -84,9 +99,9 @@
       <line num="92" count="6" type="stmt"/>
       <line num="93" count="6" type="stmt"/>
       <line num="95" count="6" type="cond" truecount="2" falsecount="0"/>
-      <line num="100" count="241711" type="stmt"/>
-      <line num="101" count="241711" type="stmt"/>
-      <line num="103" count="241711" type="stmt"/>
+      <line num="100" count="206379" type="stmt"/>
+      <line num="101" count="206379" type="stmt"/>
+      <line num="103" count="206379" type="stmt"/>
       <line num="113" count="30" type="stmt"/>
       <line num="114" count="30" type="cond" truecount="1" falsecount="0"/>
       <line num="116" count="24" type="stmt"/>
@@ -101,20 +116,20 @@
       <line num="140" count="0" type="stmt"/>
       <line num="141" count="0" type="stmt"/>
       <line num="146" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="150" count="241681" type="stmt"/>
-      <line num="151" count="241681" type="stmt"/>
-      <line num="153" count="241681" type="stmt"/>
-      <line num="154" count="241681" type="stmt"/>
-      <line num="155" count="241681" type="stmt"/>
-      <line num="157" count="241681" type="cond" truecount="1" falsecount="0"/>
+      <line num="150" count="206349" type="stmt"/>
+      <line num="151" count="206349" type="stmt"/>
+      <line num="153" count="206349" type="stmt"/>
+      <line num="154" count="206349" type="stmt"/>
+      <line num="155" count="206349" type="stmt"/>
+      <line num="157" count="206349" type="cond" truecount="1" falsecount="0"/>
       <line num="158" count="25" type="cond" truecount="1" falsecount="0"/>
       <line num="160" count="21" type="stmt"/>
       <line num="162" count="4" type="cond" truecount="1" falsecount="0"/>
       <line num="164" count="3" type="stmt"/>
       <line num="165" count="3" type="stmt"/>
-      <line num="168" count="241657" type="cond" truecount="0" falsecount="1"/>
+      <line num="168" count="206325" type="cond" truecount="0" falsecount="1"/>
       <line num="170" count="0" type="stmt"/>
-      <line num="172" count="241657" type="stmt"/>
+      <line num="172" count="206325" type="stmt"/>
       <line num="174" count="14" type="stmt"/>
       <line num="175" count="14" type="stmt"/>
       <line num="176" count="14" type="stmt"/>
@@ -142,7 +157,7 @@
       <line num="67" count="5" type="stmt"/>
     </file>
     <file name="index.ts" path="C:\Users\10177\Desktop\自建工具库\wink-utils\src\index.ts">
-      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <line num="15" count="5" type="stmt"/>
       <line num="16" count="5" type="stmt"/>
       <line num="17" count="5" type="stmt"/>
@@ -150,6 +165,7 @@
       <line num="19" count="5" type="stmt"/>
       <line num="20" count="5" type="stmt"/>
       <line num="21" count="5" type="stmt"/>
+      <line num="22" count="5" type="stmt"/>
     </file>
     <file name="isObject.ts" path="C:\Users\10177\Desktop\自建工具库\wink-utils\src\isObject.ts">
       <metrics statements="4" coveredstatements="4" conditionals="3" coveredconditionals="2" methods="1" coveredmethods="1"/>

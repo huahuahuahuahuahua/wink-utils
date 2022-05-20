@@ -42,4 +42,4 @@ cloneObj 复制后的对象
 
 #### Defined in
 
-[cloneDeep.ts:7](https://github.com/huahuahuahuahuahua/wink-utils/blob/143c432/src/cloneDeep.ts#L7)
+[cloneDeep.ts:7](https://github.com/huahuahuahuahuahua/wink-utils/blob/78e35a6/src/cloneDeep.ts#L7)

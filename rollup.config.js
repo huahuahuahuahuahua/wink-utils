@@ -1,9 +1,3 @@
-/*
- * @Author: t_winkjqzhang
- * @Date: 2022-03-31 14:34:38
- * @LastEditTime: 2022-04-13 22:42:28
- * @Description: Do not edit
- */
 import resolve from "@rollup/plugin-node-resolve";
 import babel from "@rollup/plugin-babel";
 import { terser } from "rollup-plugin-terser";

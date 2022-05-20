@@ -67,7 +67,7 @@ jQuery(window).on('popstate', debounced.cancel);
 
 #### Defined in
 
-[debounce.ts:42](https://github.com/huahuahuahuahuahua/wink-utils/blob/143c432/src/debounce.ts#L42)
+[debounce.ts:42](https://github.com/huahuahuahuahuahua/wink-utils/blob/78e35a6/src/debounce.ts#L42)
 
 ## Functions
 
@@ -89,4 +89,4 @@ jQuery(window).on('popstate', debounced.cancel);
 
 #### Defined in
 
-[debounce.ts:44](https://github.com/huahuahuahuahuahua/wink-utils/blob/143c432/src/debounce.ts#L44)
+[debounce.ts:44](https://github.com/huahuahuahuahuahua/wink-utils/blob/78e35a6/src/debounce.ts#L44)

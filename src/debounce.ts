@@ -46,12 +46,12 @@ export function debounce(
   wait = 1000,
   options: IOptions = {}
 ): TAnyFunction {
-  let lastArgs, //上次调用参数
-    lastThis, //上次调用this
-    maxWait, //最大等待时间
-    result, //返回结果
-    timerId, //timerId
-    lastCallTime, //上次调用debounced时间,即触发时间，不一定会调用func
+  let lastArgs: any, //上次调用参数
+    lastThis: any, //上次调用this
+    maxWait: any, //最大等待时间
+    result: any, //返回结果
+    timerId: any, //timerId
+    lastCallTime: any, //上次调用debounced时间,即触发时间，不一定会调用func
     lastInvokeTime = 0, //上次调用func时间，即成功执行时间
     leading = false, //超时之前
     maxing = false, //是否传入最大超时时间
@@ -79,14 +79,14 @@ export function debounce(
     return result;
   }
 
-  function leadingEdge(time) {
+  function leadingEdge(time: any) {
     //超时之前调用
     lastInvokeTime = time; //设置上次调用时间为当前时间
     timerId = setTimeout(timerExpired, wait); //开始timer
     return leading ? invokeFunc(time) : result; //如果leading为true，调用func,否则返回result
   }
 
-  function remainingWait(time): number {
+  function remainingWait(time: any): number {
     //设置还需要等待的时间
     const timeSinceLastCall = time - lastCallTime, //距离上次触发的时间
       timeSinceLastInvoke = time - lastInvokeTime, //距离上次调用func的时间
@@ -118,7 +118,7 @@ export function debounce(
     timerId = setTimeout(timerExpired, remainingWait(time)); //不调用则重置timerId
   }
 
-  function trailingEdge(time) {
+  function trailingEdge(time: any) {
     //超时之后调用
     timerId = undefined;
 

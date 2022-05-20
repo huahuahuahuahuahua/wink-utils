@@ -7,6 +7,7 @@
 ### Modules
 
 - [UrlGetRequest](modules/UrlGetRequest.md)
+- [addObjIterator](modules/addObjIterator.md)
 - [cacheAsync](modules/cacheAsync.md)
 - [changefilesize](modules/changefilesize.md)
 - [cloneDeep](modules/cloneDeep.md)

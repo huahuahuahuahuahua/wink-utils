@@ -9,3 +9,4 @@ tsconfig.json
 src/debounce.ts
 src/cloneDeep.ts
 src/cacheAsync.ts
+src/addObjIterator.ts
