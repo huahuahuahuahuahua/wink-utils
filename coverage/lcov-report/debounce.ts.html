@@ -243,12 +243,10 @@
 <a name='L178'></a><a href='#L178'>178</a>
 <a name='L179'></a><a href='#L179'>179</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -283,8 +281,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">14x</span>
 <span class="cline-any cline-yes">18x</span>
@@ -340,10 +340,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">206379x</span>
-<span class="cline-any cline-yes">206379x</span>
+<span class="cline-any cline-yes">219317x</span>
+<span class="cline-any cline-yes">219317x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">206379x</span>
+<span class="cline-any cline-yes">219317x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -390,14 +390,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">206349x</span>
-<span class="cline-any cline-yes">206349x</span>
+<span class="cline-any cline-yes">219287x</span>
+<span class="cline-any cline-yes">219287x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">206349x</span>
-<span class="cline-any cline-yes">206349x</span>
-<span class="cline-any cline-yes">206349x</span>
+<span class="cline-any cline-yes">219287x</span>
+<span class="cline-any cline-yes">219287x</span>
+<span class="cline-any cline-yes">219287x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">206349x</span>
+<span class="cline-any cline-yes">219287x</span>
 <span class="cline-any cline-yes">25x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">21x</span>
@@ -408,17 +408,17 @@
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">206325x</span>
+<span class="cline-any cline-yes">219263x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">206325x</span>
+<span class="cline-any cline-yes">219263x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">14x</span>
 <span class="cline-any cline-yes">14x</span>
 <span class="cline-any cline-yes">14x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//debounce.js
 &nbsp;
 const FUNC_ERROR_TEXT = "Expected a function";
@@ -467,12 +467,12 @@ export function debounce(
   <span class="missing-if-branch" title="if path not taken" >I</span>wait = 1000,
   options: IOptions = {}
 ): TAnyFunction {
-  let lastArgs, //上次调用参数
-    lastThis, //上次调用this
-    maxWait, //最大等待时间
-    result, //返回结果
-    timerId, //timerId
-    lastCallTime, //上次调用debounced时间,即触发时间，不一定会调用func
+  let lastArgs: any, //上次调用参数
+    lastThis: any, //上次调用this
+    maxWait: any, //最大等待时间
+    result: any, //返回结果
+    timerId: any, //timerId
+    lastCallTime: any, //上次调用debounced时间,即触发时间，不一定会调用func
     lastInvokeTime = 0, //上次调用func时间，即成功执行时间
     leading = false, //超时之前
     maxing = false, //是否传入最大超时时间
@@ -500,14 +500,14 @@ export function debounce(
     return result;
   }
 &nbsp;
-  function leadingEdge(time) {
+  function leadingEdge(time: any) {
     //超时之前调用
     lastInvokeTime = time; //设置上次调用时间为当前时间
     timerId = setTimeout(timerExpired, wait); //开始timer
     return leading ? invokeFunc(time) : result; //如果leading为true，调用func,否则返回result
   }
 &nbsp;
-  function remainingWait(time): number {
+  function remainingWait(time: any): number {
     //设置还需要等待的时间
     const timeSinceLastCall = time - lastCallTime, //距离上次触发的时间
       timeSinceLastInvoke = time - lastInvokeTime, //距离上次调用func的时间
@@ -539,7 +539,7 @@ export function debounce(
     timerId = setTimeout(timerExpired, remainingWait(time)); //不调用则重置timerId
   }
 &nbsp;
-  function trailingEdge(time) {
+  function trailingEdge(time: any) {
     //超时之后调用
     timerId = undefined;
 &nbsp;
@@ -604,7 +604,7 @@ export default debounce;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Wed Apr 27 2022 02:27:14 GMT+0800 (中国标准时间)
+                at Thu Jun 30 2022 22:32:38 GMT+0800 (中国标准时间)
             </div>
         <script src="prettify.js"></script>
         <script>

@@ -6,22 +6,22 @@
 	"originalName": "",
 	"children": [
 		{
-			"id": 69,
+			"id": 89,
 			"name": "UrlGetRequest",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 74,
+					"id": 94,
 					"name": "default",
 					"kind": 16777216,
 					"kindString": "Reference",
 					"flags": {},
-					"target": 70
+					"target": 90
 				},
 				{
-					"id": 70,
+					"id": 90,
 					"name": "UrlGetRequest",
 					"kind": 64,
 					"kindString": "Function",
@@ -35,7 +35,7 @@
 					],
 					"signatures": [
 						{
-							"id": 71,
+							"id": 91,
 							"name": "UrlGetRequest",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -55,7 +55,7 @@
 							},
 							"parameters": [
 								{
-									"id": 72,
+									"id": 92,
 									"name": "url",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -69,7 +69,7 @@
 									}
 								},
 								{
-									"id": 73,
+									"id": 93,
 									"name": "variable",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -105,14 +105,14 @@
 					"title": "References",
 					"kind": 16777216,
 					"children": [
-						74
+						94
 					]
 				},
 				{
 					"title": "Functions",
 					"kind": 64,
 					"children": [
-						70
+						90
 					]
 				}
 			],
@@ -156,7 +156,7 @@
 								"tags": [
 									{
 										"tag": "msg:a",
-										"text": "good method for add iterator"
+										"text": "good method for adding iterator"
 									},
 									{
 										"tag": "descripttion:",
@@ -1036,7 +1036,15 @@
 			"flags": {},
 			"children": [
 				{
-					"id": 78,
+					"id": 104,
+					"name": "TAnyFunc",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {},
+					"target": 68
+				},
+				{
+					"id": 98,
 					"name": "TAnyFunction",
 					"kind": 16777216,
 					"kindString": "Reference",
@@ -1044,15 +1052,15 @@
 					"target": 42
 				},
 				{
-					"id": 76,
+					"id": 96,
 					"name": "UrlGetRequest",
 					"kind": 16777216,
 					"kindString": "Reference",
 					"flags": {},
-					"target": 70
+					"target": 90
 				},
 				{
-					"id": 79,
+					"id": 99,
 					"name": "changefilesize",
 					"kind": 16777216,
 					"kindString": "Reference",
@@ -1060,7 +1068,7 @@
 					"target": 27
 				},
 				{
-					"id": 82,
+					"id": 102,
 					"name": "cloneDeep",
 					"kind": 16777216,
 					"kindString": "Reference",
@@ -1068,7 +1076,7 @@
 					"target": 32
 				},
 				{
-					"id": 77,
+					"id": 97,
 					"name": "debounce",
 					"kind": 16777216,
 					"kindString": "Reference",
@@ -1076,7 +1084,7 @@
 					"target": 37
 				},
 				{
-					"id": 80,
+					"id": 100,
 					"name": "formatNumber",
 					"kind": 16777216,
 					"kindString": "Reference",
@@ -1084,20 +1092,36 @@
 					"target": 48
 				},
 				{
-					"id": 81,
-					"name": "isObject",
+					"id": 103,
+					"name": "isCycleObject",
 					"kind": 16777216,
 					"kindString": "Reference",
 					"flags": {},
 					"target": 54
 				},
 				{
-					"id": 75,
+					"id": 101,
+					"name": "isObject",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {},
+					"target": 59
+				},
+				{
+					"id": 105,
+					"name": "memo",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {},
+					"target": 72
+				},
+				{
+					"id": 95,
 					"name": "throttle",
 					"kind": 16777216,
 					"kindString": "Reference",
 					"flags": {},
-					"target": 63
+					"target": 83
 				}
 			],
 			"groups": [
@@ -1105,14 +1129,17 @@
 					"title": "References",
 					"kind": 16777216,
 					"children": [
-						78,
-						76,
-						79,
-						82,
-						77,
-						80,
-						81,
-						75
+						104,
+						98,
+						96,
+						99,
+						102,
+						97,
+						100,
+						103,
+						101,
+						105,
+						95
 					]
 				}
 			],
@@ -1126,7 +1153,7 @@
 		},
 		{
 			"id": 53,
-			"name": "isObject",
+			"name": "isCycleObject",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
@@ -1141,53 +1168,34 @@
 				},
 				{
 					"id": 54,
-					"name": "isObject",
+					"name": "isCycleObject",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "isObject.ts",
-							"line": 8,
+							"fileName": "isCycleObject.ts",
+							"line": 6,
 							"character": 16
 						}
 					],
 					"signatures": [
 						{
 							"id": 55,
-							"name": "isObject",
+							"name": "isCycleObject",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
-							"comment": {
-								"tags": [
-									{
-										"tag": "name:",
-										"text": ""
-									},
-									{
-										"tag": "msg:",
-										"text": ""
-									},
-									{
-										"tag": "descripttion:",
-										"text": "判断是否为对象\n"
-									}
-								]
-							},
 							"parameters": [
 								{
 									"id": 56,
-									"name": "obj",
+									"name": "__namedParameters",
 									"kind": 32768,
 									"kindString": "Parameter",
 									"flags": {},
-									"comment": {
-										"shortText": "对象"
-									},
 									"type": {
-										"type": "intrinsic",
-										"name": "object"
+										"type": "reference",
+										"name": "IisCycleObject"
 									}
 								}
 							],
@@ -1217,21 +1225,21 @@
 			],
 			"sources": [
 				{
-					"fileName": "isObject.ts",
-					"line": 8,
+					"fileName": "isCycleObject.ts",
+					"line": 1,
 					"character": 0
 				}
 			]
 		},
 		{
 			"id": 58,
-			"name": "main",
+			"name": "isObject",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 61,
+					"id": 62,
 					"name": "default",
 					"kind": 16777216,
 					"kindString": "Reference",
@@ -1240,6 +1248,105 @@
 				},
 				{
 					"id": 59,
+					"name": "isObject",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "isObject.ts",
+							"line": 8,
+							"character": 16
+						}
+					],
+					"signatures": [
+						{
+							"id": 60,
+							"name": "isObject",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"tags": [
+									{
+										"tag": "name:",
+										"text": ""
+									},
+									{
+										"tag": "msg:",
+										"text": ""
+									},
+									{
+										"tag": "descripttion:",
+										"text": "判断是否为对象\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 61,
+									"name": "obj",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"shortText": "对象"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "object"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "References",
+					"kind": 16777216,
+					"children": [
+						62
+					]
+				},
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						59
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "isObject.ts",
+					"line": 8,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 63,
+			"name": "main",
+			"kind": 2,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 66,
+					"name": "default",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {},
+					"target": 64
+				},
+				{
+					"id": 64,
 					"name": "main",
 					"kind": 64,
 					"kindString": "Function",
@@ -1253,7 +1360,7 @@
 					],
 					"signatures": [
 						{
-							"id": 60,
+							"id": 65,
 							"name": "main",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -1271,14 +1378,14 @@
 					"title": "References",
 					"kind": 16777216,
 					"children": [
-						61
+						66
 					]
 				},
 				{
 					"title": "Functions",
 					"kind": 64,
 					"children": [
-						59
+						64
 					]
 				}
 			],
@@ -1291,22 +1398,251 @@
 			]
 		},
 		{
-			"id": 62,
+			"id": 67,
+			"name": "memo",
+			"kind": 2,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 81,
+					"name": "default",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {},
+					"target": 72
+				},
+				{
+					"id": 68,
+					"name": "TAnyFunc",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "memo.ts",
+							"line": 3,
+							"character": 12
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 69,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "memo.ts",
+									"line": 3,
+									"character": 23
+								}
+							],
+							"signatures": [
+								{
+									"id": 70,
+									"name": "__type",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"parameters": [
+										{
+											"id": 71,
+											"name": "args",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isRest": true
+											},
+											"type": {
+												"type": "array",
+												"elementType": {
+													"type": "intrinsic",
+													"name": "any"
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 72,
+					"name": "memo",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "memo.ts",
+							"line": 5,
+							"character": 13
+						}
+					],
+					"signatures": [
+						{
+							"id": 73,
+							"name": "memo",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 74,
+									"name": "fn",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 42,
+										"name": "TAnyFunction"
+									}
+								},
+								{
+									"id": 75,
+									"name": "hasher",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isOptional": true
+									},
+									"type": {
+										"type": "reference",
+										"id": 68,
+										"name": "TAnyFunc"
+									}
+								}
+							],
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 76,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"children": [
+										{
+											"id": 77,
+											"name": "cache",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"type": {
+												"type": "reflection",
+												"declaration": {
+													"id": 78,
+													"name": "__type",
+													"kind": 65536,
+													"kindString": "Type literal",
+													"flags": {}
+												}
+											}
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"kind": 1024,
+											"children": [
+												77
+											]
+										}
+									],
+									"signatures": [
+										{
+											"id": 79,
+											"name": "__type",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"parameters": [
+												{
+													"id": 80,
+													"name": "argument",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {
+														"isRest": true
+													},
+													"type": {
+														"type": "array",
+														"elementType": {
+															"type": "intrinsic",
+															"name": "any"
+														}
+													}
+												}
+											],
+											"type": {
+												"type": "intrinsic",
+												"name": "any"
+											}
+										}
+									]
+								}
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "References",
+					"kind": 16777216,
+					"children": [
+						81
+					]
+				},
+				{
+					"title": "Type aliases",
+					"kind": 4194304,
+					"children": [
+						68
+					]
+				},
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						72
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "memo.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 82,
 			"name": "throttle",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 68,
+					"id": 88,
 					"name": "default",
 					"kind": 16777216,
 					"kindString": "Reference",
 					"flags": {},
-					"target": 63
+					"target": 83
 				},
 				{
-					"id": 63,
+					"id": 83,
 					"name": "throttle",
 					"kind": 64,
 					"kindString": "Function",
@@ -1320,14 +1656,14 @@
 					],
 					"signatures": [
 						{
-							"id": 64,
+							"id": 84,
 							"name": "throttle",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 65,
+									"id": 85,
 									"name": "func",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1339,7 +1675,7 @@
 									}
 								},
 								{
-									"id": 66,
+									"id": 86,
 									"name": "wait",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1350,7 +1686,7 @@
 									}
 								},
 								{
-									"id": 67,
+									"id": 87,
 									"name": "options",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1376,14 +1712,14 @@
 					"title": "References",
 					"kind": 16777216,
 					"children": [
-						68
+						88
 					]
 				},
 				{
 					"title": "Functions",
 					"kind": 64,
 					"children": [
-						63
+						83
 					]
 				}
 			],
@@ -1401,7 +1737,7 @@
 			"title": "Modules",
 			"kind": 2,
 			"children": [
-				69,
+				89,
 				1,
 				5,
 				26,
@@ -1411,7 +1747,9 @@
 				52,
 				53,
 				58,
-				62
+				63,
+				67,
+				82
 			]
 		}
 	]

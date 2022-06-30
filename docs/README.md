@@ -18,6 +18,7 @@ wink-utils / [Modules](modules.md)
 | 路径 | 解释 | 包含 |
 | :----- | :----- | :----- |
 | [dist/UrlGetRequest.js](docs/modules/UrlGetRequest.md) | 暂无解释 | [default](docs/modules/UrlGetRequest.md#default)<br /> [UrlGetRequest( url: string, variable: string )](docs/modules/UrlGetRequest.md#UrlGetRequest) |
+| [dist/addObjIterator.js](docs/modules/addObjIterator.md) | 暂无解释 | [default( obj: object )](docs/modules/addObjIterator.md#default) |
 | [dist/cacheAsync.js](docs/modules/cacheAsync.md) | 暂无解释 | [OldcacheAsync( fn: TAnyFunction )](docs/modules/cacheAsync.md#OldcacheAsync)<br /> [UpdateCacheAsync( promiseGenerator: any, symbol: any )](docs/modules/cacheAsync.md#UpdateCacheAsync)<br /> [fetchData( a:  )](docs/modules/cacheAsync.md#fetchData) |
 | [dist/changefilesize.js](docs/modules/changefilesize.md) | 暂无解释 | [default](docs/modules/changefilesize.md#default)<br /> [changefilesize( limit: number )](docs/modules/changefilesize.md#changefilesize) |
 | [dist/cloneDeep.js](docs/modules/cloneDeep.md) | 暂无解释 | [default](docs/modules/cloneDeep.md#default)<br /> [cloneDeep( obj: any )](docs/modules/cloneDeep.md#cloneDeep) |
@@ -31,6 +32,12 @@ wink-utils / [Modules](modules.md)
 ## 版本更新
 
 # 工具库更新日志
+
+## [1.0.6](https://github.com/huahuahuahuahuahua/wink-utils/compare/v1.0.5...v1.0.6) (2022-04-20)
+
+### Bug Fixes
+
+* 找不到包问题 ([d2ffd69](https://github.com/huahuahuahuahuahua/wink-utils/commit/d2ffd69bf03316ad8f0b71edafb8b2ac7db509f2))
 
 ## [1.0.5](https://github.com/huahuahuahuahuahua/wink-utils/compare/v1.0.4...v1.0.5) (2022-04-17)
 

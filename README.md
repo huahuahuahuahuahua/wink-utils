@@ -16,14 +16,17 @@
 | 路径 | 解释 | 包含 |
 | :----- | :----- | :----- |
 | [dist/UrlGetRequest.js](docs/modules/UrlGetRequest.md) | 暂无解释 | [default](docs/modules/UrlGetRequest.md#default)<br /> [UrlGetRequest( url: string, variable: string )](docs/modules/UrlGetRequest.md#UrlGetRequest) |
+| [dist/addObjIterator.js](docs/modules/addObjIterator.md) | 暂无解释 | [default( obj: object )](docs/modules/addObjIterator.md#default) |
 | [dist/cacheAsync.js](docs/modules/cacheAsync.md) | 暂无解释 | [OldcacheAsync( fn: TAnyFunction )](docs/modules/cacheAsync.md#OldcacheAsync)<br /> [UpdateCacheAsync( promiseGenerator: any, symbol: any )](docs/modules/cacheAsync.md#UpdateCacheAsync)<br /> [fetchData( a:  )](docs/modules/cacheAsync.md#fetchData) |
 | [dist/changefilesize.js](docs/modules/changefilesize.md) | 暂无解释 | [default](docs/modules/changefilesize.md#default)<br /> [changefilesize( limit: number )](docs/modules/changefilesize.md#changefilesize) |
 | [dist/cloneDeep.js](docs/modules/cloneDeep.md) | 暂无解释 | [default](docs/modules/cloneDeep.md#default)<br /> [cloneDeep( obj: any )](docs/modules/cloneDeep.md#cloneDeep) |
 | [dist/debounce.js](docs/modules/debounce.md) | 暂无解释 | [default](docs/modules/debounce.md#default)<br /> [debounce( func: TAnyFunction, wait: number, options: IOptions )](docs/modules/debounce.md#debounce) |
 | [dist/formatnumber.js](docs/modules/formatnumber.md) | 暂无解释 | [default](docs/modules/formatnumber.md#default)<br /> [formatNumber( num: number )](docs/modules/formatnumber.md#formatNumber) |
-| [dist/index.js](docs/modules/index.md) | 暂无解释 | [TAnyFunction](docs/modules/index.md#TAnyFunction)<br /> [UrlGetRequest](docs/modules/index.md#UrlGetRequest)<br /> [changefilesize](docs/modules/index.md#changefilesize)<br /> [cloneDeep](docs/modules/index.md#cloneDeep)<br /> [debounce](docs/modules/index.md#debounce)<br /> [formatNumber](docs/modules/index.md#formatNumber)<br /> [isObject](docs/modules/index.md#isObject)<br /> [throttle](docs/modules/index.md#throttle) |
+| [dist/index.js](docs/modules/index.md) | 暂无解释 | [TAnyFunc](docs/modules/index.md#TAnyFunc)<br /> [TAnyFunction](docs/modules/index.md#TAnyFunction)<br /> [UrlGetRequest](docs/modules/index.md#UrlGetRequest)<br /> [changefilesize](docs/modules/index.md#changefilesize)<br /> [cloneDeep](docs/modules/index.md#cloneDeep)<br /> [debounce](docs/modules/index.md#debounce)<br /> [formatNumber](docs/modules/index.md#formatNumber)<br /> [isCycleObject](docs/modules/index.md#isCycleObject)<br /> [isObject](docs/modules/index.md#isObject)<br /> [memo](docs/modules/index.md#memo)<br /> [throttle](docs/modules/index.md#throttle) |
+| [dist/isCycleObject.js](docs/modules/isCycleObject.md) | 暂无解释 | [default](docs/modules/isCycleObject.md#default)<br /> [isCycleObject( __namedParameters: IisCycleObject )](docs/modules/isCycleObject.md#isCycleObject) |
 | [dist/isObject.js](docs/modules/isObject.md) | 暂无解释 | [default](docs/modules/isObject.md#default)<br /> [isObject( obj: object )](docs/modules/isObject.md#isObject) |
 | [dist/main.js](docs/modules/main.md) | 暂无解释 | [default](docs/modules/main.md#default)<br /> [main()](docs/modules/main.md#main) |
+| [dist/memo.js](docs/modules/memo.md) | 暂无解释 | [default](docs/modules/memo.md#default)<br /> [memo( fn: TAnyFunction, hasher?: TAnyFunc )](docs/modules/memo.md#memo) |
 | [dist/throttle.js](docs/modules/throttle.md) | 暂无解释 | [default](docs/modules/throttle.md#default)<br /> [throttle( func: TAnyFunction, wait: number, options: IOptions )](docs/modules/throttle.md#throttle) |
 
 ## 版本更新

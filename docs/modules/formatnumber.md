@@ -44,4 +44,4 @@ number:转换后的值，value：倍数
 
 #### Defined in
 
-[formatnumber.ts:8](https://github.com/huahuahuahuahuahua/wink-utils/blob/78e35a6/src/formatnumber.ts#L8)
+[formatnumber.ts:8](https://github.com/huahuahuahuahuahua/wink-utils/blob/60986b6/src/formatnumber.ts#L8)

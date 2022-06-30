@@ -21,6 +21,8 @@
     "cacheAsync",
     "cloneDeep",
     "isObject",
+    "isCycleObject",
+    "memo",
     "index"
   ],
   "files": [

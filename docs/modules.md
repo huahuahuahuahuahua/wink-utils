@@ -14,6 +14,8 @@
 - [debounce](modules/debounce.md)
 - [formatnumber](modules/formatnumber.md)
 - [index](modules/index.md)
+- [isCycleObject](modules/isCycleObject.md)
 - [isObject](modules/isObject.md)
 - [main](modules/main.md)
+- [memo](modules/memo.md)
 - [throttle](modules/throttle.md)

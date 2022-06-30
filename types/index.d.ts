@@ -13,3 +13,5 @@ export * from "./changefilesize";
 export * from "./formatnumber";
 export * from "./isObject";
 export * from "./cloneDeep";
+export * from "./isCycleObject";
+export * from "./memo";
